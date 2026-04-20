@@ -411,7 +411,1625 @@ const RAW = [
 
   // ── POWER ──────────────────────────────────────────────────────
   ['Power', 'Pancakes Proteines',  'Zone sportive plage', 7,  14, '', 'https://i.postimg.cc/85nxZ1Cb/pancakes-prote-ine-s-a-la-whey-sans-sucre.jpg'],
-  ['Power', 'Whey fraise',         'Zone sportive plage', 4,  8,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Whey fraise',         'Zone sportive plage', 4,  8,  '', <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTD Grove Street — Catalogue</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --v: #A78BFA;
+    --vl: #C4B5FD;
+    --vd: #7C5CBF;
+    --vglow: rgba(167,139,250,0.15);
+    --bg: #06050e;
+    --bg2: #09081a;
+    --bg3: #0e0c1c;
+    --bg4: #151228;
+    --bg5: #1c1832;
+    --border: #1a1730;
+    --border2: #251f45;
+    --text: #f0ecff;
+    --text2: #9b91c8;
+    --text3: #4e4770;
+    --green: #34d399;
+    --greenb: rgba(52,211,153,.1);
+    --amber: #fbbf24;
+    --amberb: rgba(251,191,36,.1);
+    --red: #f87171;
+    --redb: rgba(248,113,113,.1);
+    --font-d: 'Bebas Neue', sans-serif;
+    --font-b: 'DM Sans', sans-serif;
+    --font-m: 'Space Mono', monospace;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font-b); font-size: 14px; overflow: hidden; }
+
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(167,139,250,0.008) 3px, rgba(167,139,250,0.008) 4px);
+    pointer-events: none; z-index: 9999;
+  }
+  body::after {
+    content: ''; position: fixed; top: -120px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(124,92,191,0.18) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+
+  .shell { display: grid; grid-template-rows: auto auto auto 1fr; height: 100vh; overflow: hidden; position: relative; z-index: 1; }
+
+  .header { background: rgba(6,5,14,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border2); position: relative; }
+  .header::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--vd) 40%, var(--v) 60%, transparent 100%); opacity: 0.5; }
+  .header-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px 10px; }
+  .header-bottom { padding: 0 28px 14px; }
+
+  .logo { display: flex; align-items: center; gap: 14px; }
+  .logo-mark { position: relative; }
+  .logo-mark::after { content: ''; position: absolute; inset: -4px; border-radius: 10px; background: radial-gradient(circle, rgba(167,139,250,0.15), transparent 70%); pointer-events: none; }
+  .logo-mark svg { width: 42px; height: 42px; display: block; }
+  .logo-text h1 { font-family: var(--font-d); font-size: 26px; letter-spacing: 5px; color: var(--text); line-height: 1; }
+  .logo-text span { font-family: var(--font-m); font-size: 7px; letter-spacing: 5px; color: var(--vd); display: block; margin-top: 3px; text-transform: uppercase; }
+
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .clock-time { font-family: var(--font-m); font-size: 22px; color: var(--text); letter-spacing: 3px; line-height: 1; text-align: right; }
+  .clock-date { font-family: var(--font-m); font-size: 8px; color: var(--text3); letter-spacing: 2px; margin-top: 3px; text-transform: uppercase; text-align: right; }
+
+  .status-pill { display: flex; align-items: center; gap: 7px; background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.2); border-radius: 20px; padding: 6px 14px; font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; color: var(--green); text-transform: uppercase; }
+  .sdot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
+
+  .search-wrap { display: flex; align-items: center; gap: 10px; background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 10px 16px; width: 100%; transition: border-color .2s, background .2s; }
+  .search-wrap:focus-within { border-color: var(--vd); background: var(--bg5); }
+  .search-wrap input { background: none; border: none; outline: none; color: var(--text); font-family: var(--font-b); font-size: 13px; width: 100%; }
+  .search-wrap input::placeholder { color: var(--text3); }
+
+  .tabs { display: flex; padding: 0 20px; overflow-x: scroll; scrollbar-width: none; -ms-overflow-style: none; white-space: nowrap; background: var(--bg); border-bottom: 1px solid var(--border); gap: 2px; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { padding: 10px 16px; font-family: var(--font-m); font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); cursor: pointer; border-radius: var(--radius-sm) var(--radius-sm) 0 0; white-space: nowrap; transition: color .2s, background .2s; display: flex; align-items: center; gap: 7px; user-select: none; margin-bottom: -1px; border: 1px solid transparent; border-bottom: none; }
+  .tab:hover:not(.active) { color: var(--text2); background: rgba(167,139,250,.04); }
+  .tab.active { color: var(--v); background: var(--bg3); border-color: var(--border2); border-bottom-color: var(--bg3); }
+  .tab-n { font-size: 8px; background: var(--bg4); border: 1px solid var(--border2); border-radius: 6px; padding: 1px 6px; color: var(--text3); }
+  .tab.active .tab-n { background: var(--vglow); border-color: rgba(167,139,250,.3); color: var(--v); }
+
+  .scroll-slider-wrap { padding: 7px 24px 8px; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .scroll-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 3px; background: var(--border2); border-radius: 3px; outline: none; cursor: pointer; display: block; }
+  .scroll-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 40px; height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--vd), var(--v)); cursor: grab; border: none; box-shadow: 0 0 8px rgba(167,139,250,.4); }
+  .scroll-slider:active::-webkit-slider-thumb { cursor: grabbing; box-shadow: 0 0 16px rgba(167,139,250,.6); }
+  .scroll-slider::-moz-range-thumb { width: 40px; height: 12px; border-radius: 6px; border: none; background: linear-gradient(90deg, var(--vd), var(--v)); cursor: grab; }
+
+  .main { overflow-y: auto; padding: 24px 24px 48px; background: var(--bg2); scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
+
+  .section-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+  .section-label { font-family: var(--font-m); font-size: 8.5px; letter-spacing: 3.5px; color: var(--vd); text-transform: uppercase; }
+  .sort-select { background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius-sm); color: var(--text2); font-family: var(--font-m); font-size: 8.5px; letter-spacing: 1px; padding: 6px 12px; outline: none; cursor: pointer; }
+
+  .cat-header { display: flex; align-items: center; gap: 12px; margin: 32px 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border2); position: relative; }
+  .cat-header::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 1px; background: var(--v); opacity: 0.6; }
+  .cat-header:first-of-type { margin-top: 0; }
+  .cat-icon { width: 34px; height: 34px; border-radius: var(--radius-sm); background: var(--vglow); border: 1px solid rgba(167,139,250,.22); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .cat-title { font-family: var(--font-d); font-size: 22px; letter-spacing: 3px; color: var(--v); }
+  .cat-count { font-family: var(--font-m); font-size: 8px; color: var(--text3); letter-spacing: 2px; margin-left: auto; }
+
+  .pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; margin-bottom: 8px; }
+
+  .card { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color .25s, transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+  .card:hover { border-color: rgba(167,139,250,.5); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(124,92,191,.18); }
+
+  .card-img { width: 100%; aspect-ratio: 1; background: var(--bg4); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .card-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(6,5,14,.5) 100%); pointer-events: none; }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .card:hover .card-img img { transform: scale(1.06); }
+  .card-img .no-photo { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text3); }
+  .card-img .no-photo svg { opacity: 0.25; }
+  .card-img .no-photo span { font-family: var(--font-m); font-size: 7px; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.35; }
+
+  .card-top { padding: 11px 13px 8px; }
+  .card-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.35; }
+  .card-tagline { font-size: 10px; color: var(--text3); line-height: 1.45; padding: 0 13px 8px; font-style: italic; }
+
+  .card-body { padding: 8px 13px 12px; margin-top: auto; border-top: 1px solid var(--border); }
+  .price-row { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 8px; }
+  .price-sell { display: flex; flex-direction: column; gap: 1px; }
+  .price-sell .lbl { font-family: var(--font-m); font-size: 7px; letter-spacing: 1.5px; color: var(--text3); text-transform: uppercase; }
+  .price-sell .val { font-family: var(--font-d); font-size: 22px; letter-spacing: .5px; color: var(--v); line-height: 1; }
+
+  .bottom-row { display: flex; align-items: center; justify-content: space-between; }
+  .stock-badge { font-family: var(--font-m); font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; font-weight: 700; }
+  .st-stock { background: var(--greenb); color: var(--green); border: 1px solid rgba(52,211,153,.3); }
+  .st-new   { background: var(--amberb); color: var(--amber); border: 1px solid rgba(251,191,36,.3); }
+  .st-sold  { background: var(--redb);   color: var(--red);   border: 1px solid rgba(248,113,113,.3); }
+  .st-dispo { background: var(--bg5); color: var(--text3); border: 1px solid var(--border2); }
+
+  .add-btn { width: 26px; height: 26px; border-radius: var(--radius-sm); background: var(--vglow); border: 1px solid rgba(167,139,250,.35); color: var(--v); font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s, box-shadow .15s; line-height: 1; }
+  .add-btn:hover { background: rgba(167,139,250,.28); box-shadow: 0 0 10px rgba(167,139,250,.3); }
+
+  .pack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .pack-card { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color .25s, transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+  .pack-card:hover { border-color: rgba(167,139,250,.5); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,92,191,.22); }
+  .pack-card-img { width: 100%; aspect-ratio: 16/9; background: var(--bg4); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .pack-card-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(6,5,14,.7) 100%); pointer-events: none; }
+  .pack-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .pack-card:hover .pack-card-img img { transform: scale(1.05); }
+  .pack-card-img .no-photo { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text3); }
+  .pack-card-img .no-photo span { font-family: var(--font-m); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; opacity: .35; }
+  .pack-card-body { padding: 18px 20px 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .pack-ref { font-family: var(--font-m); font-size: 8px; letter-spacing: 3px; color: var(--vd); text-transform: uppercase; }
+  .pack-name { font-family: var(--font-d); font-size: 24px; letter-spacing: 2px; color: var(--text); line-height: 1.1; }
+  .pack-tagline { font-size: 11px; color: var(--text2); line-height: 1.6; flex: 1; }
+  .pack-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border); margin-top: 4px; }
+  .pack-price { font-family: var(--font-d); font-size: 30px; letter-spacing: 1px; color: var(--v); line-height: 1; }
+  .pack-btn { font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; background: var(--vglow); border: 1px solid rgba(167,139,250,.4); color: var(--v); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; transition: background .15s, box-shadow .15s; }
+  .pack-btn:hover { background: rgba(167,139,250,.25); box-shadow: 0 0 12px rgba(167,139,250,.25); }
+
+  .empty { text-align: center; padding: 80px; color: var(--text3); }
+  .empty p { font-family: var(--font-m); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+
+  .toast { position: fixed; bottom: 100px; right: 28px; z-index: 2000; background: var(--bg4); border: 1px solid rgba(167,139,250,.4); border-radius: var(--radius); padding: 12px 16px; display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text); transform: translateY(30px); opacity: 0; transition: transform .3s cubic-bezier(.34,1.56,.64,1), opacity .25s; pointer-events: none; max-width: 280px; box-shadow: 0 8px 32px rgba(0,0,0,.5); }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .tdot { width: 7px; height: 7px; border-radius: 50%; background: var(--v); box-shadow: 0 0 8px var(--v); flex-shrink: 0; }
+
+  .fly-dot { position: fixed; width: 10px; height: 10px; border-radius: 50%; background: var(--v); box-shadow: 0 0 10px var(--v); pointer-events: none; z-index: 9998; }
+  @keyframes badgeBump { 0%{transform:scale(1)} 40%{transform:scale(1.6)} 100%{transform:scale(1)} }
+  .cart-badge.bump { animation: badgeBump .35s cubic-bezier(.34,1.56,.64,1); }
+
+  .cart-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1001; width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, var(--vd), var(--v)); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(124,92,191,.5), 0 0 30px rgba(167,139,250,.15); transition: transform .2s, box-shadow .2s; }
+  .cart-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(124,92,191,.7); }
+  .cart-fab:active { transform: scale(0.95); }
+  .cart-fab svg { width: 22px; height: 22px; stroke: #fff; }
+  .cart-badge { position: absolute; top: -3px; right: -3px; background: var(--amber); color: #000; font-family: var(--font-m); font-size: 9px; font-weight: 700; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg); opacity: 0; transform: scale(0); transition: opacity .2s, transform .25s cubic-bezier(.34,1.56,.64,1); }
+  .cart-badge.show { opacity: 1; transform: scale(1); }
+
+  .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.65); z-index: 1002; opacity: 0; pointer-events: none; transition: opacity .3s; backdrop-filter: blur(4px); }
+  .cart-overlay.show { opacity: 1; pointer-events: all; }
+
+  .cart-panel { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1003; background: var(--bg3); border-top: 1px solid var(--border2); border-radius: 20px 20px 0 0; transform: translateY(100%); transition: transform .36s cubic-bezier(.34,1.1,.64,1); max-height: 78vh; display: flex; flex-direction: column; box-shadow: 0 -8px 40px rgba(0,0,0,.6); }
+  .cart-panel.show { transform: translateY(0); }
+  .cart-handle { width: 36px; height: 4px; border-radius: 2px; background: var(--border2); margin: 12px auto 0; flex-shrink: 0; }
+  .cart-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+  .cart-title { font-family: var(--font-d); font-size: 24px; letter-spacing: 3px; color: var(--v); }
+  .cart-clear { font-family: var(--font-m); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--red); background: var(--redb); border: 1px solid rgba(248,113,113,.25); border-radius: var(--radius-sm); padding: 6px 12px; cursor: pointer; transition: background .15s; }
+  .cart-clear:hover { background: rgba(248,113,113,.2); }
+  .cart-items { overflow-y: auto; flex: 1; padding: 6px 20px 10px; scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
+  .cart-item { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+  .cart-item:last-child { border-bottom: none; }
+  .cart-item-img { width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--bg4); overflow: hidden; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); }
+  .cart-item-img img { width: 100%; height: 100%; object-fit: cover; }
+  .cart-item-info { flex: 1; min-width: 0; }
+  .cart-item-name { font-size: 12px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cart-item-unit { font-family: var(--font-m); font-size: 9px; color: var(--text3); margin-top: 2px; }
+  .cart-item-qty { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .qty-btn { width: 26px; height: 26px; border-radius: 6px; background: var(--bg5); border: 1px solid var(--border2); color: var(--text2); font-size: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .15s; line-height: 1; }
+  .qty-btn:hover { background: var(--vglow); border-color: rgba(167,139,250,.35); color: var(--v); }
+  .qty-num { font-family: var(--font-m); font-size: 13px; color: var(--text); min-width: 22px; text-align: center; }
+  .cart-item-total { font-family: var(--font-d); font-size: 18px; color: var(--v); min-width: 75px; text-align: right; flex-shrink: 0; }
+  .cart-empty-msg { text-align: center; padding: 44px 20px; color: var(--text3); font-family: var(--font-m); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+  .cart-footer { padding: 14px 20px 32px; border-top: 1px solid var(--border2); display: flex; align-items: center; justify-content: space-between; background: var(--bg4); flex-shrink: 0; }
+  .cart-total-label { font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; color: var(--text3); text-transform: uppercase; margin-bottom: 4px; }
+  .cart-total-val { font-family: var(--font-d); font-size: 34px; letter-spacing: 1px; color: var(--v); line-height: 1; }
+  .cart-count-info { font-family: var(--font-m); font-size: 9px; color: var(--text3); margin-top: 3px; }
+
+  #splash { position: fixed; inset: 0; z-index: 99999; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity .6s ease, transform .6s ease; }
+  #splash.hide { opacity: 0; transform: scale(1.04); pointer-events: none; }
+  .splash-logo { opacity: 0; transform: translateY(20px); animation: splashIn .7s cubic-bezier(.34,1.56,.64,1) .2s forwards; }
+  .splash-logo svg { width: 72px; height: 72px; }
+  .splash-title { font-family: var(--font-d); font-size: 52px; letter-spacing: 10px; color: var(--text); margin-top: 20px; line-height: 1; opacity: 0; transform: translateY(16px); animation: splashIn .7s cubic-bezier(.34,1.56,.64,1) .4s forwards; }
+  .splash-sub { font-family: var(--font-m); font-size: 9px; letter-spacing: 6px; color: var(--vd); text-transform: uppercase; margin-top: 10px; opacity: 0; animation: splashFade .6s ease .7s forwards; }
+  .splash-bar-wrap { margin-top: 48px; width: 180px; height: 2px; background: var(--border2); border-radius: 2px; overflow: hidden; opacity: 0; animation: splashFade .4s ease .8s forwards; }
+  .splash-bar { height: 100%; width: 0%; border-radius: 2px; background: linear-gradient(90deg, var(--vd), var(--v)); box-shadow: 0 0 10px var(--v); animation: splashLoad 1.2s cubic-bezier(.4,0,.2,1) .9s forwards; }
+  .splash-glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(124,92,191,.25) 0%, transparent 70%); pointer-events: none; animation: splashPulse 2s ease-in-out infinite; }
+
+  @keyframes splashIn   { to { opacity:1; transform:translateY(0); } }
+  @keyframes splashFade { to { opacity:1; } }
+  @keyframes splashLoad { to { width:100%; } }
+  @keyframes splashPulse{ 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.1);opacity:1} }
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="splash-glow"></div>
+  <div class="splash-logo">
+    <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="68" height="68" rx="10" stroke="#A78BFA" stroke-width="1.2" fill="#0d0a18"/>
+      <path d="M14 56 L36 18 L58 56 Z" fill="none" stroke="#A78BFA" stroke-width="2"/>
+      <path d="M23 42 L49 42" stroke="#A78BFA" stroke-width="1.8"/>
+      <circle cx="36" cy="18" r="3" fill="#A78BFA"/>
+      <circle cx="36" cy="18" r="6" fill="none" stroke="#A78BFA" stroke-width="0.6" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="splash-title">Grove Street</div>
+  <div class="splash-sub">LTD Collection — Catalogue</div>
+  <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
+</div>
+
+<div class="shell">
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="38" height="38" rx="5" stroke="#A78BFA" stroke-width="0.8" fill="#0d0a18"/>
+            <path d="M8 30 L20 10 L32 30 Z" fill="none" stroke="#A78BFA" stroke-width="1.4"/>
+            <path d="M13 23 L27 23" stroke="#A78BFA" stroke-width="1.1"/>
+            <circle cx="20" cy="10" r="1.8" fill="#A78BFA"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>Grove Street</h1>
+          <span>LTD Collection — Catalogue</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div>
+          <div class="clock-time" id="clock">--:--</div>
+          <div class="clock-date" id="cdate">---</div>
+        </div>
+        <div class="status-pill"><span class="sdot"></span>En ligne</div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="search-wrap">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4a4570" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="search" placeholder="Rechercher un article..." oninput="render()">
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs"></nav>
+  <div class="scroll-slider-wrap">
+    <input type="range" class="scroll-slider" id="tabsSlider" min="0" max="100" value="0" step="1">
+  </div>
+  <main class="main" id="main"></main>
+</div>
+
+<div class="toast" id="toast"><span class="tdot"></span><span id="toast-msg"></span></div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-handle"></div>
+  <div class="cart-header">
+    <div class="cart-title">Panier</div>
+    <button class="cart-clear" onclick="clearCart()">Vider</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div>
+      <div class="cart-total-label">Total</div>
+      <div class="cart-total-val" id="cartTotal">0,00 $</div>
+      <div class="cart-count-info" id="cartCountInfo">0 article</div>
+    </div>
+  </div>
+</div>
+<button class="cart-fab" id="cartFab" onclick="toggleCart()">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+  </svg>
+  <div class="cart-badge" id="cartBadge">0</div>
+</button>
+
+<script>
+// ════════════════════════════════════════════════════════════════════
+//  FORMAT : [Catégorie, Nom, Source, Achat, Vente, Statut, IMAGE]
+//  → Pour ajouter une photo : remplace null par 'https://i.imgur.com/TONID.jpg'
+//  → Statuts dispo : '' | 'Epuise' | 'En stock' | 'Nouvel achat'
+// ════════════════════════════════════════════════════════════════════
+const RAW = [
+
+  // ── JARDINAGE ──────────────────────────────────────────────────
+  ['Jardinage', 'Fertilisant',        'Youtools', 5,    10,   '', 'https://i.imgur.com/u78t07f.jpeg'],
+  ['Jardinage', 'Pot de Fleur',       'Youtools', 5,    10,   '', 'https://i.imgur.com/up3vvgX.jpeg'],
+  ['Jardinage', 'Table',              'Youtools', 5,    10,   '', 'https://i.imgur.com/QrAZyZi.jpeg'],
+  ['Jardinage', 'Terre',              'Youtools', 0.20, 12,   '', 'https://i.imgur.com/nl6Fy8L.jpeg'],
+  ['Jardinage', 'Bac de jardinage',   'Youtools', 10,   18,   '', 'https://i.imgur.com/jph66BW.jpeg'],
+  ['Jardinage', 'Lumiere violette',   'Craft',    0,    36,   '', 'https://i.imgur.com/tOodLxC.jpeg'],
+  ['Jardinage', 'Cisaille',           'Craft',    750,  1050, '', 'https://i.imgur.com/JgzR8uI.jpeg'],
+
+  // ── NOUVEAUTÉ ──────────────────────────────────────────────────
+  ['Nouveauté', 'Rose',                 'Craft', 0,   250,  '', 'https://i.imgur.com/VlNwjqh.jpeg'],
+  ['Nouveauté', 'Bouquet de Roses',     'Craft', 0,   1000, '', 'https://i.imgur.com/7vYR92M.jpeg'],
+  ['Nouveauté', 'Bouquet de Fleurs',    'Craft', 0,   600,  '', 'https://i.imgur.com/kETMZrW.jpeg'],
+  ['Nouveauté', 'Rose eternelle',       'Craft', 0,   1600, '', 'https://i.imgur.com/5SHKv9P.jpeg'],
+  ['Nouveauté', 'BMX 2 Places',         'Craft', 0,   500,  '', 'https://i.imgur.com/KnDFBQX.png'],
+  ['Nouveauté', 'Trotinette Electrique','Craft', 350, 750,  '', 'https://i.imgur.com/JbFYVmg.jpeg'],
+  ['Nouveauté', 'Doudou Pinguin',       'Craft', 0,   600,  '', 'https://i.imgur.com/UJsr6o9.jpeg'],
+  ['Nouveauté', 'Anneau',               'Craft', 0,   4500, '', 'https://i.imgur.com/IeZhLLx.jpeg'],
+  ['Nouveauté', 'Anneau de Mariage',    'Craft', 0,   400,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+
+  // ── QUINCAILLERIE ──────────────────────────────────────────────
+  ['Quincaillerie', 'Bobine de Cuivre',  'Craft',    0,   null, '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Pile Verte',        'Youtools', 1,   3,   '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Outils',            'Youtools', 3,   5,   '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Perceuse',          'Youtools', 5,   10,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Grosse Perceuse',   'Youtools', 7,   12,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Pince coupante',    'Youtools', 8,   16,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Pince pour plaque', 'Youtools', 12,  23,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Perceuse manuel',   'Youtools', 7,   12,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Foret de Perceuse', 'Youtools', 400, 650, '', 'https://i.postimg.cc/6Q8rdwD7/foret.jpg'],
+
+  // ── ENTRETIEN ──────────────────────────────────────────────────
+  ['Entretien', 'Eponge pour voiture', 'Youtools',           1,   null,'', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Bicarbonate',         'Caisse',             1,   2,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Caoutchouc (Craft)',  'Craft',              null,5,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Caoutchouc',          'Youtools',           30,  5,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Huile',               'Youtools',           4,   8,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Huile Noire',         'Youtools',           8,   16, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Huile Shell',         'Youtools',           6,   12, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Batterie de voiture', 'Youtools',           10,  20, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Kit de Nettoyage',    'Commande entreprise',null,80, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Batterie',            'Youtools',           5,   10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── PAPETERIE ──────────────────────────────────────────────────
+  ['Papeterie', 'Colle',             'Youtools',           1,  3,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Sachet vide',       'Commande entreprise',3,  5,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Encre',             'Youtools',           3,  6,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Porte Document',    'Caisse',             5,  10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Porte Feuille',     'Caisse',             5,  10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Trousseau de cles', 'Caisse',             50, 90, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── QUOTIDIEN ──────────────────────────────────────────────────
+  ['Quotidien', 'Papier a rouler',       'Caisse',             1,    2,    '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Carte SIM',             'Digital',            5,    10,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Appat',                 'Commande entreprise',5,    10,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Elastique',             'Caisse',             10,   20,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Ticket a gratter',      'Caisse',             15,   25,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Post it',               'Craft',              0,    50,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Carte SD',              'Digital',            20,   40,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Ballon de Football',    'Caisse',             25,   50,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Ballon de Basket',      'Caisse',             25,   50,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Canne a peche',         'Youtools',           32,   60,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Skate',                 'Caisse',             50,   90,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Telephone Basique',     'Digital',            60,   120,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Palette de maquillage', 'Commande entreprise',null, 165,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'BMX',                   'Commande entreprise',null, 200,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Porte cle',             'Commande entreprise',null, null, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Telephone',             'Digital',            135,  250,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Doudou',                'Commande entreprise',null, null, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Appareil Photo',        'Digital',            350,  680,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Galaxy',                'Digital',            435,  800,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Tablette',              'Digital',            629,  1000, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Eponge',                'Caisse',             750,  1100, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Spray Tag',             'Caisse',             1250, 1900, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── ALIMENTAIRE ────────────────────────────────────────────────
+  ['Alimentaire', 'Creme glacee',       'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Pot Creme glacee',   'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Creme Fraiche',      'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Cola',               'Caisse',             2,   4,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Moutarde',           'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Coquille a tacos',   'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Tortilla',           'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bouteille eau',      'Caisse',             5,   10,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon cola',        'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon tada',        'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon Drag',        'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon',             'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Barre choco caramel','Caisse',             9,   16,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Barre chocolatee',   'Caisse',             9,   18,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Baguette',           'Caisse',             10,  20,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Pistache',           'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Noix cajou',         'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Brique citron',      'Caisse',             8,   16,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Noix',               'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Menu decouverte',    'Commande entreprise',null,90,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Menu festin',        'Commande entreprise',null,120, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Herisson',           'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── POWER ──────────────────────────────────────────────────────
+  ['Power', 'Pancakes Proteines',  'Zone sportive plage', 7,  14, '', 'https://i.postimg.cc/85nxZ1Cb/pancakes-prote-ine-s-a-la-whey-sans-sucre.jpg'],
+  ['Power', 'Whey fraise',         'Zone sportive plage', 4,  8,  '', <!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LTD Grove Street — Catalogue</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --v: #A78BFA;
+    --vl: #C4B5FD;
+    --vd: #7C5CBF;
+    --vglow: rgba(167,139,250,0.15);
+    --bg: #06050e;
+    --bg2: #09081a;
+    --bg3: #0e0c1c;
+    --bg4: #151228;
+    --bg5: #1c1832;
+    --border: #1a1730;
+    --border2: #251f45;
+    --text: #f0ecff;
+    --text2: #9b91c8;
+    --text3: #4e4770;
+    --green: #34d399;
+    --greenb: rgba(52,211,153,.1);
+    --amber: #fbbf24;
+    --amberb: rgba(251,191,36,.1);
+    --red: #f87171;
+    --redb: rgba(248,113,113,.1);
+    --font-d: 'Bebas Neue', sans-serif;
+    --font-b: 'DM Sans', sans-serif;
+    --font-m: 'Space Mono', monospace;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+
+  html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font-b); font-size: 14px; overflow: hidden; }
+
+  body::before {
+    content: ''; position: fixed; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(167,139,250,0.008) 3px, rgba(167,139,250,0.008) 4px);
+    pointer-events: none; z-index: 9999;
+  }
+  body::after {
+    content: ''; position: fixed; top: -120px; left: 50%; transform: translateX(-50%);
+    width: 600px; height: 300px;
+    background: radial-gradient(ellipse, rgba(124,92,191,0.18) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+
+  .shell { display: grid; grid-template-rows: auto auto auto 1fr; height: 100vh; overflow: hidden; position: relative; z-index: 1; }
+
+  .header { background: rgba(6,5,14,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border2); position: relative; }
+  .header::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--vd) 40%, var(--v) 60%, transparent 100%); opacity: 0.5; }
+  .header-top { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px 10px; }
+  .header-bottom { padding: 0 28px 14px; }
+
+  .logo { display: flex; align-items: center; gap: 14px; }
+  .logo-mark { position: relative; }
+  .logo-mark::after { content: ''; position: absolute; inset: -4px; border-radius: 10px; background: radial-gradient(circle, rgba(167,139,250,0.15), transparent 70%); pointer-events: none; }
+  .logo-mark svg { width: 42px; height: 42px; display: block; }
+  .logo-text h1 { font-family: var(--font-d); font-size: 26px; letter-spacing: 5px; color: var(--text); line-height: 1; }
+  .logo-text span { font-family: var(--font-m); font-size: 7px; letter-spacing: 5px; color: var(--vd); display: block; margin-top: 3px; text-transform: uppercase; }
+
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  .clock-time { font-family: var(--font-m); font-size: 22px; color: var(--text); letter-spacing: 3px; line-height: 1; text-align: right; }
+  .clock-date { font-family: var(--font-m); font-size: 8px; color: var(--text3); letter-spacing: 2px; margin-top: 3px; text-transform: uppercase; text-align: right; }
+
+  .status-pill { display: flex; align-items: center; gap: 7px; background: rgba(52,211,153,0.07); border: 1px solid rgba(52,211,153,0.2); border-radius: 20px; padding: 6px 14px; font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; color: var(--green); text-transform: uppercase; }
+  .sdot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.8)} }
+
+  .search-wrap { display: flex; align-items: center; gap: 10px; background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius-sm); padding: 10px 16px; width: 100%; transition: border-color .2s, background .2s; }
+  .search-wrap:focus-within { border-color: var(--vd); background: var(--bg5); }
+  .search-wrap input { background: none; border: none; outline: none; color: var(--text); font-family: var(--font-b); font-size: 13px; width: 100%; }
+  .search-wrap input::placeholder { color: var(--text3); }
+
+  .tabs { display: flex; padding: 0 20px; overflow-x: scroll; scrollbar-width: none; -ms-overflow-style: none; white-space: nowrap; background: var(--bg); border-bottom: 1px solid var(--border); gap: 2px; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { padding: 10px 16px; font-family: var(--font-m); font-size: 8.5px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); cursor: pointer; border-radius: var(--radius-sm) var(--radius-sm) 0 0; white-space: nowrap; transition: color .2s, background .2s; display: flex; align-items: center; gap: 7px; user-select: none; margin-bottom: -1px; border: 1px solid transparent; border-bottom: none; }
+  .tab:hover:not(.active) { color: var(--text2); background: rgba(167,139,250,.04); }
+  .tab.active { color: var(--v); background: var(--bg3); border-color: var(--border2); border-bottom-color: var(--bg3); }
+  .tab-n { font-size: 8px; background: var(--bg4); border: 1px solid var(--border2); border-radius: 6px; padding: 1px 6px; color: var(--text3); }
+  .tab.active .tab-n { background: var(--vglow); border-color: rgba(167,139,250,.3); color: var(--v); }
+
+  .scroll-slider-wrap { padding: 7px 24px 8px; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .scroll-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 3px; background: var(--border2); border-radius: 3px; outline: none; cursor: pointer; display: block; }
+  .scroll-slider::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 40px; height: 12px; border-radius: 6px; background: linear-gradient(90deg, var(--vd), var(--v)); cursor: grab; border: none; box-shadow: 0 0 8px rgba(167,139,250,.4); }
+  .scroll-slider:active::-webkit-slider-thumb { cursor: grabbing; box-shadow: 0 0 16px rgba(167,139,250,.6); }
+  .scroll-slider::-moz-range-thumb { width: 40px; height: 12px; border-radius: 6px; border: none; background: linear-gradient(90deg, var(--vd), var(--v)); cursor: grab; }
+
+  .main { overflow-y: auto; padding: 24px 24px 48px; background: var(--bg2); scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
+
+  .section-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+  .section-label { font-family: var(--font-m); font-size: 8.5px; letter-spacing: 3.5px; color: var(--vd); text-transform: uppercase; }
+  .sort-select { background: var(--bg4); border: 1px solid var(--border2); border-radius: var(--radius-sm); color: var(--text2); font-family: var(--font-m); font-size: 8.5px; letter-spacing: 1px; padding: 6px 12px; outline: none; cursor: pointer; }
+
+  .cat-header { display: flex; align-items: center; gap: 12px; margin: 32px 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border2); position: relative; }
+  .cat-header::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 1px; background: var(--v); opacity: 0.6; }
+  .cat-header:first-of-type { margin-top: 0; }
+  .cat-icon { width: 34px; height: 34px; border-radius: var(--radius-sm); background: var(--vglow); border: 1px solid rgba(167,139,250,.22); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .cat-title { font-family: var(--font-d); font-size: 22px; letter-spacing: 3px; color: var(--v); }
+  .cat-count { font-family: var(--font-m); font-size: 8px; color: var(--text3); letter-spacing: 2px; margin-left: auto; }
+
+  .pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 12px; margin-bottom: 8px; }
+
+  .card { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color .25s, transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+  .card:hover { border-color: rgba(167,139,250,.5); transform: translateY(-3px); box-shadow: 0 8px 32px rgba(124,92,191,.18); }
+
+  .card-img { width: 100%; aspect-ratio: 1; background: var(--bg4); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .card-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(6,5,14,.5) 100%); pointer-events: none; }
+  .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .card:hover .card-img img { transform: scale(1.06); }
+  .card-img .no-photo { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--text3); }
+  .card-img .no-photo svg { opacity: 0.25; }
+  .card-img .no-photo span { font-family: var(--font-m); font-size: 7px; letter-spacing: 2.5px; text-transform: uppercase; opacity: 0.35; }
+
+  .card-top { padding: 11px 13px 8px; }
+  .card-name { font-size: 12px; font-weight: 600; color: var(--text); line-height: 1.35; }
+  .card-tagline { font-size: 10px; color: var(--text3); line-height: 1.45; padding: 0 13px 8px; font-style: italic; }
+
+  .card-body { padding: 8px 13px 12px; margin-top: auto; border-top: 1px solid var(--border); }
+  .price-row { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 8px; }
+  .price-sell { display: flex; flex-direction: column; gap: 1px; }
+  .price-sell .lbl { font-family: var(--font-m); font-size: 7px; letter-spacing: 1.5px; color: var(--text3); text-transform: uppercase; }
+  .price-sell .val { font-family: var(--font-d); font-size: 22px; letter-spacing: .5px; color: var(--v); line-height: 1; }
+
+  .bottom-row { display: flex; align-items: center; justify-content: space-between; }
+  .stock-badge { font-family: var(--font-m); font-size: 7px; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 8px; border-radius: 20px; font-weight: 700; }
+  .st-stock { background: var(--greenb); color: var(--green); border: 1px solid rgba(52,211,153,.3); }
+  .st-new   { background: var(--amberb); color: var(--amber); border: 1px solid rgba(251,191,36,.3); }
+  .st-sold  { background: var(--redb);   color: var(--red);   border: 1px solid rgba(248,113,113,.3); }
+  .st-dispo { background: var(--bg5); color: var(--text3); border: 1px solid var(--border2); }
+
+  .add-btn { width: 26px; height: 26px; border-radius: var(--radius-sm); background: var(--vglow); border: 1px solid rgba(167,139,250,.35); color: var(--v); font-size: 18px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background .15s, box-shadow .15s; line-height: 1; }
+  .add-btn:hover { background: rgba(167,139,250,.28); box-shadow: 0 0 10px rgba(167,139,250,.3); }
+
+  .pack-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+  .pack-card { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: border-color .25s, transform .25s, box-shadow .25s; display: flex; flex-direction: column; }
+  .pack-card:hover { border-color: rgba(167,139,250,.5); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(124,92,191,.22); }
+  .pack-card-img { width: 100%; aspect-ratio: 16/9; background: var(--bg4); display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+  .pack-card-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(6,5,14,.7) 100%); pointer-events: none; }
+  .pack-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .pack-card:hover .pack-card-img img { transform: scale(1.05); }
+  .pack-card-img .no-photo { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text3); }
+  .pack-card-img .no-photo span { font-family: var(--font-m); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; opacity: .35; }
+  .pack-card-body { padding: 18px 20px 16px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+  .pack-ref { font-family: var(--font-m); font-size: 8px; letter-spacing: 3px; color: var(--vd); text-transform: uppercase; }
+  .pack-name { font-family: var(--font-d); font-size: 24px; letter-spacing: 2px; color: var(--text); line-height: 1.1; }
+  .pack-tagline { font-size: 11px; color: var(--text2); line-height: 1.6; flex: 1; }
+  .pack-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px solid var(--border); margin-top: 4px; }
+  .pack-price { font-family: var(--font-d); font-size: 30px; letter-spacing: 1px; color: var(--v); line-height: 1; }
+  .pack-btn { font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; text-transform: uppercase; background: var(--vglow); border: 1px solid rgba(167,139,250,.4); color: var(--v); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; transition: background .15s, box-shadow .15s; }
+  .pack-btn:hover { background: rgba(167,139,250,.25); box-shadow: 0 0 12px rgba(167,139,250,.25); }
+
+  .empty { text-align: center; padding: 80px; color: var(--text3); }
+  .empty p { font-family: var(--font-m); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; }
+
+  .toast { position: fixed; bottom: 100px; right: 28px; z-index: 2000; background: var(--bg4); border: 1px solid rgba(167,139,250,.4); border-radius: var(--radius); padding: 12px 16px; display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text); transform: translateY(30px); opacity: 0; transition: transform .3s cubic-bezier(.34,1.56,.64,1), opacity .25s; pointer-events: none; max-width: 280px; box-shadow: 0 8px 32px rgba(0,0,0,.5); }
+  .toast.show { transform: translateY(0); opacity: 1; }
+  .tdot { width: 7px; height: 7px; border-radius: 50%; background: var(--v); box-shadow: 0 0 8px var(--v); flex-shrink: 0; }
+
+  .fly-dot { position: fixed; width: 10px; height: 10px; border-radius: 50%; background: var(--v); box-shadow: 0 0 10px var(--v); pointer-events: none; z-index: 9998; }
+  @keyframes badgeBump { 0%{transform:scale(1)} 40%{transform:scale(1.6)} 100%{transform:scale(1)} }
+  .cart-badge.bump { animation: badgeBump .35s cubic-bezier(.34,1.56,.64,1); }
+
+  .cart-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1001; width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(135deg, var(--vd), var(--v)); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(124,92,191,.5), 0 0 30px rgba(167,139,250,.15); transition: transform .2s, box-shadow .2s; }
+  .cart-fab:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(124,92,191,.7); }
+  .cart-fab:active { transform: scale(0.95); }
+  .cart-fab svg { width: 22px; height: 22px; stroke: #fff; }
+  .cart-badge { position: absolute; top: -3px; right: -3px; background: var(--amber); color: #000; font-family: var(--font-m); font-size: 9px; font-weight: 700; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid var(--bg); opacity: 0; transform: scale(0); transition: opacity .2s, transform .25s cubic-bezier(.34,1.56,.64,1); }
+  .cart-badge.show { opacity: 1; transform: scale(1); }
+
+  .cart-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.65); z-index: 1002; opacity: 0; pointer-events: none; transition: opacity .3s; backdrop-filter: blur(4px); }
+  .cart-overlay.show { opacity: 1; pointer-events: all; }
+
+  .cart-panel { position: fixed; bottom: 0; left: 0; right: 0; z-index: 1003; background: var(--bg3); border-top: 1px solid var(--border2); border-radius: 20px 20px 0 0; transform: translateY(100%); transition: transform .36s cubic-bezier(.34,1.1,.64,1); max-height: 78vh; display: flex; flex-direction: column; box-shadow: 0 -8px 40px rgba(0,0,0,.6); }
+  .cart-panel.show { transform: translateY(0); }
+  .cart-handle { width: 36px; height: 4px; border-radius: 2px; background: var(--border2); margin: 12px auto 0; flex-shrink: 0; }
+  .cart-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px 12px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
+  .cart-title { font-family: var(--font-d); font-size: 24px; letter-spacing: 3px; color: var(--v); }
+  .cart-clear { font-family: var(--font-m); font-size: 8px; letter-spacing: 2px; text-transform: uppercase; color: var(--red); background: var(--redb); border: 1px solid rgba(248,113,113,.25); border-radius: var(--radius-sm); padding: 6px 12px; cursor: pointer; transition: background .15s; }
+  .cart-clear:hover { background: rgba(248,113,113,.2); }
+  .cart-items { overflow-y: auto; flex: 1; padding: 6px 20px 10px; scrollbar-width: thin; scrollbar-color: var(--border2) transparent; }
+  .cart-item { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--border); }
+  .cart-item:last-child { border-bottom: none; }
+  .cart-item-img { width: 44px; height: 44px; border-radius: var(--radius-sm); background: var(--bg4); overflow: hidden; flex-shrink: 0; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); }
+  .cart-item-img img { width: 100%; height: 100%; object-fit: cover; }
+  .cart-item-info { flex: 1; min-width: 0; }
+  .cart-item-name { font-size: 12px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cart-item-unit { font-family: var(--font-m); font-size: 9px; color: var(--text3); margin-top: 2px; }
+  .cart-item-qty { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+  .qty-btn { width: 26px; height: 26px; border-radius: 6px; background: var(--bg5); border: 1px solid var(--border2); color: var(--text2); font-size: 16px; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .15s; line-height: 1; }
+  .qty-btn:hover { background: var(--vglow); border-color: rgba(167,139,250,.35); color: var(--v); }
+  .qty-num { font-family: var(--font-m); font-size: 13px; color: var(--text); min-width: 22px; text-align: center; }
+  .cart-item-total { font-family: var(--font-d); font-size: 18px; color: var(--v); min-width: 75px; text-align: right; flex-shrink: 0; }
+  .cart-empty-msg { text-align: center; padding: 44px 20px; color: var(--text3); font-family: var(--font-m); font-size: 9px; letter-spacing: 3px; text-transform: uppercase; }
+  .cart-footer { padding: 14px 20px 32px; border-top: 1px solid var(--border2); display: flex; align-items: center; justify-content: space-between; background: var(--bg4); flex-shrink: 0; }
+  .cart-total-label { font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; color: var(--text3); text-transform: uppercase; margin-bottom: 4px; }
+  .cart-total-val { font-family: var(--font-d); font-size: 34px; letter-spacing: 1px; color: var(--v); line-height: 1; }
+  .cart-count-info { font-family: var(--font-m); font-size: 9px; color: var(--text3); margin-top: 3px; }
+
+  #splash { position: fixed; inset: 0; z-index: 99999; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity .6s ease, transform .6s ease; }
+  #splash.hide { opacity: 0; transform: scale(1.04); pointer-events: none; }
+  .splash-logo { opacity: 0; transform: translateY(20px); animation: splashIn .7s cubic-bezier(.34,1.56,.64,1) .2s forwards; }
+  .splash-logo svg { width: 72px; height: 72px; }
+  .splash-title { font-family: var(--font-d); font-size: 52px; letter-spacing: 10px; color: var(--text); margin-top: 20px; line-height: 1; opacity: 0; transform: translateY(16px); animation: splashIn .7s cubic-bezier(.34,1.56,.64,1) .4s forwards; }
+  .splash-sub { font-family: var(--font-m); font-size: 9px; letter-spacing: 6px; color: var(--vd); text-transform: uppercase; margin-top: 10px; opacity: 0; animation: splashFade .6s ease .7s forwards; }
+  .splash-bar-wrap { margin-top: 48px; width: 180px; height: 2px; background: var(--border2); border-radius: 2px; overflow: hidden; opacity: 0; animation: splashFade .4s ease .8s forwards; }
+  .splash-bar { height: 100%; width: 0%; border-radius: 2px; background: linear-gradient(90deg, var(--vd), var(--v)); box-shadow: 0 0 10px var(--v); animation: splashLoad 1.2s cubic-bezier(.4,0,.2,1) .9s forwards; }
+  .splash-glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(124,92,191,.25) 0%, transparent 70%); pointer-events: none; animation: splashPulse 2s ease-in-out infinite; }
+
+  @keyframes splashIn   { to { opacity:1; transform:translateY(0); } }
+  @keyframes splashFade { to { opacity:1; } }
+  @keyframes splashLoad { to { width:100%; } }
+  @keyframes splashPulse{ 0%,100%{transform:scale(1);opacity:.6} 50%{transform:scale(1.1);opacity:1} }
+</style>
+</head>
+<body>
+
+<div id="splash">
+  <div class="splash-glow"></div>
+  <div class="splash-logo">
+    <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="2" width="68" height="68" rx="10" stroke="#A78BFA" stroke-width="1.2" fill="#0d0a18"/>
+      <path d="M14 56 L36 18 L58 56 Z" fill="none" stroke="#A78BFA" stroke-width="2"/>
+      <path d="M23 42 L49 42" stroke="#A78BFA" stroke-width="1.8"/>
+      <circle cx="36" cy="18" r="3" fill="#A78BFA"/>
+      <circle cx="36" cy="18" r="6" fill="none" stroke="#A78BFA" stroke-width="0.6" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="splash-title">Grove Street</div>
+  <div class="splash-sub">LTD Collection — Catalogue</div>
+  <div class="splash-bar-wrap"><div class="splash-bar"></div></div>
+</div>
+
+<div class="shell">
+  <header class="header">
+    <div class="header-top">
+      <div class="logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="1" y="1" width="38" height="38" rx="5" stroke="#A78BFA" stroke-width="0.8" fill="#0d0a18"/>
+            <path d="M8 30 L20 10 L32 30 Z" fill="none" stroke="#A78BFA" stroke-width="1.4"/>
+            <path d="M13 23 L27 23" stroke="#A78BFA" stroke-width="1.1"/>
+            <circle cx="20" cy="10" r="1.8" fill="#A78BFA"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>Grove Street</h1>
+          <span>LTD Collection — Catalogue</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div>
+          <div class="clock-time" id="clock">--:--</div>
+          <div class="clock-date" id="cdate">---</div>
+        </div>
+        <div class="status-pill"><span class="sdot"></span>En ligne</div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="search-wrap">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4a4570" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="search" placeholder="Rechercher un article..." oninput="render()">
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs"></nav>
+  <div class="scroll-slider-wrap">
+    <input type="range" class="scroll-slider" id="tabsSlider" min="0" max="100" value="0" step="1">
+  </div>
+  <main class="main" id="main"></main>
+</div>
+
+<div class="toast" id="toast"><span class="tdot"></span><span id="toast-msg"></span></div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-handle"></div>
+  <div class="cart-header">
+    <div class="cart-title">Panier</div>
+    <button class="cart-clear" onclick="clearCart()">Vider</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div>
+      <div class="cart-total-label">Total</div>
+      <div class="cart-total-val" id="cartTotal">0,00 $</div>
+      <div class="cart-count-info" id="cartCountInfo">0 article</div>
+    </div>
+  </div>
+</div>
+<button class="cart-fab" id="cartFab" onclick="toggleCart()">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+  </svg>
+  <div class="cart-badge" id="cartBadge">0</div>
+</button>
+
+<script>
+// ════════════════════════════════════════════════════════════════════
+//  FORMAT : [Catégorie, Nom, Source, Achat, Vente, Statut, IMAGE]
+//  → Pour ajouter une photo : remplace null par 'https://i.imgur.com/TONID.jpg'
+//  → Statuts dispo : '' | 'Epuise' | 'En stock' | 'Nouvel achat'
+// ════════════════════════════════════════════════════════════════════
+const RAW = [
+
+  // ── JARDINAGE ──────────────────────────────────────────────────
+  ['Jardinage', 'Fertilisant',        'Youtools', 5,    10,   '', 'https://i.imgur.com/u78t07f.jpeg'],
+  ['Jardinage', 'Pot de Fleur',       'Youtools', 5,    10,   '', 'https://i.imgur.com/up3vvgX.jpeg'],
+  ['Jardinage', 'Table',              'Youtools', 5,    10,   '', 'https://i.imgur.com/QrAZyZi.jpeg'],
+  ['Jardinage', 'Terre',              'Youtools', 0.20, 12,   '', 'https://i.imgur.com/nl6Fy8L.jpeg'],
+  ['Jardinage', 'Bac de jardinage',   'Youtools', 10,   18,   '', 'https://i.imgur.com/jph66BW.jpeg'],
+  ['Jardinage', 'Lumiere violette',   'Craft',    0,    36,   '', 'https://i.imgur.com/tOodLxC.jpeg'],
+  ['Jardinage', 'Cisaille',           'Craft',    750,  1050, '', 'https://i.imgur.com/JgzR8uI.jpeg'],
+
+  // ── NOUVEAUTÉ ──────────────────────────────────────────────────
+  ['Nouveauté', 'Rose',                 'Craft', 0,   250,  '', 'https://i.imgur.com/VlNwjqh.jpeg'],
+  ['Nouveauté', 'Bouquet de Roses',     'Craft', 0,   1000, '', 'https://i.imgur.com/7vYR92M.jpeg'],
+  ['Nouveauté', 'Bouquet de Fleurs',    'Craft', 0,   600,  '', 'https://i.imgur.com/kETMZrW.jpeg'],
+  ['Nouveauté', 'Rose eternelle',       'Craft', 0,   1600, '', 'https://i.imgur.com/5SHKv9P.jpeg'],
+  ['Nouveauté', 'BMX 2 Places',         'Craft', 0,   500,  '', 'https://i.imgur.com/KnDFBQX.png'],
+  ['Nouveauté', 'Trotinette Electrique','Craft', 350, 750,  '', 'https://i.imgur.com/JbFYVmg.jpeg'],
+  ['Nouveauté', 'Doudou Pinguin',       'Craft', 0,   600,  '', 'https://i.imgur.com/UJsr6o9.jpeg'],
+  ['Nouveauté', 'Anneau',               'Craft', 0,   4500, '', 'https://i.imgur.com/IeZhLLx.jpeg'],
+  ['Nouveauté', 'Anneau de Mariage',    'Craft', 0,   400,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+
+  // ── QUINCAILLERIE ──────────────────────────────────────────────
+  ['Quincaillerie', 'Bobine de Cuivre',  'Craft',    0,   null, '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Pile Verte',        'Youtools', 1,   3,   '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Outils',            'Youtools', 3,   5,   '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Perceuse',          'Youtools', 5,   10,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Grosse Perceuse',   'Youtools', 7,   12,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Pince coupante',    'Youtools', 8,   16,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Pince pour plaque', 'Youtools', 12,  23,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Perceuse manuel',   'Youtools', 7,   12,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Foret de Perceuse', 'Youtools', 400, 650, '', 'https://i.postimg.cc/6Q8rdwD7/foret.jpg'],
+
+  // ── ENTRETIEN ──────────────────────────────────────────────────
+  ['Entretien', 'Eponge pour voiture', 'Youtools',           1,   null,'', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Bicarbonate',         'Caisse',             1,   2,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Caoutchouc (Craft)',  'Craft',              null,5,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Caoutchouc',          'Youtools',           30,  5,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Huile',               'Youtools',           4,   8,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Huile Noire',         'Youtools',           8,   16, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Huile Shell',         'Youtools',           6,   12, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Batterie de voiture', 'Youtools',           10,  20, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Kit de Nettoyage',    'Commande entreprise',null,80, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Entretien', 'Batterie',            'Youtools',           5,   10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── PAPETERIE ──────────────────────────────────────────────────
+  ['Papeterie', 'Colle',             'Youtools',           1,  3,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Sachet vide',       'Commande entreprise',3,  5,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Encre',             'Youtools',           3,  6,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Porte Document',    'Caisse',             5,  10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Porte Feuille',     'Caisse',             5,  10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Papeterie', 'Trousseau de cles', 'Caisse',             50, 90, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── QUOTIDIEN ──────────────────────────────────────────────────
+  ['Quotidien', 'Papier a rouler',       'Caisse',             1,    2,    '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Carte SIM',             'Digital',            5,    10,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Appat',                 'Commande entreprise',5,    10,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Elastique',             'Caisse',             10,   20,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Ticket a gratter',      'Caisse',             15,   25,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Post it',               'Craft',              0,    50,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Carte SD',              'Digital',            20,   40,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Ballon de Football',    'Caisse',             25,   50,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Ballon de Basket',      'Caisse',             25,   50,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Canne a peche',         'Youtools',           32,   60,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Skate',                 'Caisse',             50,   90,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Telephone Basique',     'Digital',            60,   120,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Palette de maquillage', 'Commande entreprise',null, 165,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'BMX',                   'Commande entreprise',null, 200,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Porte cle',             'Commande entreprise',null, null, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Telephone',             'Digital',            135,  250,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Doudou',                'Commande entreprise',null, null, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Appareil Photo',        'Digital',            350,  680,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Galaxy',                'Digital',            435,  800,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Tablette',              'Digital',            629,  1000, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Eponge',                'Caisse',             750,  1100, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Quotidien', 'Spray Tag',             'Caisse',             1250, 1900, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── ALIMENTAIRE ────────────────────────────────────────────────
+  ['Alimentaire', 'Creme glacee',       'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Pot Creme glacee',   'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Creme Fraiche',      'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Cola',               'Caisse',             2,   4,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Moutarde',           'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Coquille a tacos',   'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Tortilla',           'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bouteille eau',      'Caisse',             5,   10,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon cola',        'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon tada',        'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon Drag',        'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Bonbon',             'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Barre choco caramel','Caisse',             9,   16,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Barre chocolatee',   'Caisse',             9,   18,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Baguette',           'Caisse',             10,  20,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Pistache',           'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Noix cajou',         'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Brique citron',      'Caisse',             8,   16,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Noix',               'Caisse',             4,   8,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Menu decouverte',    'Commande entreprise',null,90,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Menu festin',        'Commande entreprise',null,120, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Alimentaire', 'Herisson',           'Caisse',             1,   2,   '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+
+  // ── POWER ──────────────────────────────────────────────────────
+  ['Power', 'Pancakes Proteines',  'Zone sportive plage', 7,  14, '', 'https://i.postimg.cc/85nxZ1Cb/pancakes-prote-ine-s-a-la-whey-sans-sucre.jpg'],
+  ['Power', 'Whey fraise',         'Zone sportive plage', 4,  8,  '', 'https://i.postimg.cc/CMCnWz0m/c55c00ee-c4bf-4de7-bc9b-8fe4fae0c7a9.png'],
+  ['Power', 'Whey zero',           'Zone sportive plage', 4,  8,  '', 'https://i.postimg.cc/Fzhz9Vvn/91c840cc-9abe-45e6-9829-ef43cbee3ad7.png'],
+  ['Power', 'Proteine Muscle2000', 'Zone sportive plage', 10, 20, '', 'https://i.postimg.cc/52X0N0cJ/29a45aae-1253-43c9-a804-5210bdcce367.png'],
+  ['Power', 'Pure Whey',           'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/5y99c95Q/c33e33cd-929c-40a6-b463-57a29d72e666.png'],
+  ['Power', 'Whey Gold',           'Zone sportive plage', 5,  10, '', 'https://i.postimg.cc/nczV0zhD/edbbcaba-2594-4d1d-93a8-068b17f8d08a.png'],
+  ['Power', 'Barre energetique',   'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/V6g1FQyF/ffd18f1e-0701-4c8f-8901-00f8b3d410b8.png'],
+  ['Power', 'Proteine Energy',     'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/8s8yJcyR/daedbc28-7d2b-4a32-9066-06929d60e114.png'], 
+  ['Power', 'Boisson energetique', 'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/wjkpzYMY/d74c56de-73f5-4dc6-95cb-034b61df7362.png'],
+  ['Power', 'Milkshake proteine',  'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/5NddF2Fb/35788710-ad50-4945-b6d6-71b446e9811d.png'],
+];
+
+// ── PACKS ──────────────────────────────────────────────────────────
+const PACK_DATA = [
+  { ref:'GS-PCK-001', name:'Pack Pêche',      img:null, price:600,  tagline:'55 appâts + 1 canne à pêche. Tout pour une session réussie.' },
+  { ref:'GS-PCK-002', name:'Pack Réparation', img:null, price:660,  tagline:'1 foret de perceuse + 1 grosse perceuse. Le duo parfait pour vos travaux.' },
+  { ref:'GS-PCK-003', name:'Pack Jardinage',  img:null, price:450,  tagline:'9 pots + 9 fertilisants + 27 bouteilles + 1 lampe violette. La totale pour votre jardin.' },
+  { ref:'GS-PCK-004', name:'Pack Artiste',    img:null, price:2800, tagline:'1 éponge + 1 spray tag. Le pack du vrai artiste de rue.' },
+];
+
+// ─── CHANGER L'IMAGE PROMO ICI ─────────────────────────────────────
+const PROMO_IMG = 'https://i.imgur.com/XXXXXXX.jpg'; // <-- colle ton lien Imgur ici
+// ───────────────────────────────────────────────────────────────────
+
+const DATA = RAW.map(r => ({ cat:r[0], name:r[1], src:r[2], buy:r[3], sell:r[4], status:r[5], img:r[6]||null }));
+
+const CAT_ICONS = {
+  'Promo de la semaine': '⭐',
+  'Pack': '📦',
+  'Nouveauté': '🆕',
+  'Alimentaire': '🍎',
+  'Jardinage': '🌿',
+  'Entretien': '🛢️',
+  'Papeterie': '📄',
+  'Quotidien': '🛍️',
+  'Quincaillerie': '🔧',
+  'Power': '💪'
+};
+const CATS = ['Tous', ...Object.keys(CAT_ICONS)];
+
+function fmt(v) {
+  if (v === null || v === undefined) return 'xx,xx $';
+  return v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' $';
+}
+
+const ITEM_TAGLINE = {
+  'Fertilisant':'Booste la croissance de vos plantes en un rien de temps.',
+  'Pot de Fleur':'Pour cultiver en beauté, dans le style Grove Street.',
+  'Table':'Solide, pratique, indispensable pour votre espace.',
+  'Terre':'De la bonne terre pour faire pousser n\'importe quoi.',
+  'Bac de jardinage':'Grand format pour les projets ambitieux.',
+  'Lumiere violette':'La lumière idéale pour faire pousser en intérieur.',
+  'Cisaille':'Coupe net, coupe propre. L\'outil du pro.',
+  'Rose':'Une rose fraîche, livrée avec soin.',
+  'Bouquet de Roses':'Un bouquet de roses pour marquer les esprits.',
+  'Bouquet de Fleurs':'Un bouquet qui en dit plus que les mots.',
+  'Rose eternelle':'Elle ne fane jamais. Un cadeau pour l\'éternité.',
+  'BMX 2 Places':'Pour rider à deux dans les rues de la ville.',
+  'Trotinette Electrique':'Glisse en silence, arrive en premier.',
+  'Doudou Pinguin':'Un peu de douceur dans ce monde de brutes.',
+  'Anneau':'Le symbole ultime, forgé pour durer.',
+  'Anneau de Mariage':'Pour sceller les liens les plus précieux.',
+  'Bobine de Cuivre':'Du cuivre pur pour vos montages électriques.',
+  'Pile Verte':'Petite pile, grande autonomie.',
+  'Outils':'Le kit de base pour ne jamais être à court.',
+  'Perceuse':'Compacte et efficace pour tous vos perçages.',
+  'Grosse Perceuse':'Pour les gros travaux, elle ne lâche pas.',
+  'Pince coupante':'Coupe fils et câbles avec précision.',
+  'Pince pour plaque':'Indispensable pour la pose de plaques.',
+  'Perceuse manuel':'Simple, fiable, sans batterie à charger.',
+  'Foret de Perceuse':'Perce dans le béton comme dans du beurre.',
+  'Eponge pour voiture':'Douceur maximale pour votre carrosserie.',
+  'Bicarbonate':'Le produit miracle pour nettoyer tout et n\'importe quoi.',
+  'Caoutchouc (Craft)':'Du caoutchouc artisanal, souple et résistant.',
+  'Caoutchouc':'Polyvalent et durable pour toutes vos réparations.',
+  'Huile':'Lubrifie et protège vos mécaniques.',
+  'Huile Noire':'Haute viscosité pour les moteurs exigeants.',
+  'Huile Shell':'Qualité premium pour une protection maximale.',
+  'Batterie de voiture':'Recharge rapide, longue durée de vie.',
+  'Kit de Nettoyage':'Tout ce qu\'il faut pour un véhicule impeccable.',
+  'Batterie':'Petite batterie, fiable et rechargeable.',
+  'Colle':'Colle forte, sèche vite, tient longtemps.',
+  'Sachet vide':'Pour conditionner et transporter discrètement.',
+  'Encre':'Noire et intense, pour une impression parfaite.',
+  'Porte Document':'Garde vos papiers importants en sécurité.',
+  'Porte Feuille':'Slim et solide, pour vos essentiels.',
+  'Trousseau de cles':'Organize vos clés avec style.',
+  'Papier a rouler':'Pour les amateurs de l\'authentique.',
+  'Carte SIM':'Connexion instantanée, partout dans la ville.',
+  'Appat':'L\'appât parfait pour ferrer du gros.',
+  'Elastique':'Toujours utile, toujours là quand il le faut.',
+  'Ticket a gratter':'Tente ta chance, tu sais jamais.',
+  'Post it':'Note tout, oublie rien.',
+  'Carte SD':'Stocke plus, efface moins.',
+  'Ballon de Football':'Pour les matchs qui comptent vraiment.',
+  'Ballon de Basket':'Rebond parfait, prise en main irréprochable.',
+  'Canne a peche':'Légère et solide pour des heures au bord de l\'eau.',
+  'Skate':'Quatre roues pour conquérir les rues.',
+  'Telephone Basique':'Simple, solide, ça appelle et ça tient la charge.',
+  'Palette de maquillage':'Toutes les couleurs pour se réinventer chaque jour.',
+  'BMX':'Pour rider dans les rues sans se faire remarquer.',
+  'Porte cle':'Un petit détail qui dit beaucoup.',
+  'Telephone':'Puissant, rapide, toujours connecté.',
+  'Doudou':'Un peu de douceur dans ce monde de brutes.',
+  'Appareil Photo':'Capture chaque moment comme un pro.',
+  'Galaxy':'Le flagship pour ceux qui veulent le meilleur.',
+  'Tablette':'Grand écran, grande puissance.',
+  'Eponge':'Spéciale tags, absorption totale.',
+  'Spray Tag':'La couleur qui marque les esprits et les murs.',
+  'Creme glacee':'Fraîche et crémeuse, parfaite après une longue journée.',
+  'Pot Creme glacee':'Le grand format pour partager ou pas.',
+  'Creme Fraiche':'Onctueuse et naturelle, elle relève tout.',
+  'Cola':'La classique qui désaltère comme il faut.',
+  'Moutarde':'Du piquant pour ceux qui savent ce qu\'ils veulent.',
+  'Coquille a tacos':'Croustillante à souhait pour vos tacos maison.',
+  'Tortilla':'Souple et généreuse, elle enroule tout.',
+  'Bouteille eau':'Hydratation pure, indispensable sur le terrain.',
+  'Bonbon cola':'Le goût cola en version pocket.',
+  'Bonbon tada':'Une surprise à chaque bouchée.',
+  'Bonbon Drag':'Petits mais intenses, ils cartonnent.',
+  'Bonbon':'Le classique qui fait toujours plaisir.',
+  'Barre choco caramel':'Chocolat et caramel, le combo gagnant.',
+  'Barre chocolatee':'L\'énergie du chocolat quand il le faut.',
+  'Baguette':'Fraîche du jour, croustillante à souhait.',
+  'Pistache':'Salées et grillées, impossibles à arrêter.',
+  'Noix cajou':'Douces et croquantes, le snack parfait.',
+  'Brique citron':'L\'acidité qui réveille, format pratique.',
+  'Noix':'Naturelles et nourrissantes, straight from the tree.',
+  'Menu decouverte':'Un repas complet pour découvrir nos spécialités.',
+  'Menu festin':'Le grand menu pour les grandes occasions.',
+  'Herisson':'Petit prix, grand goût.',
+  'Pancakes Proteines':'Le petit déj des champions, riche en protéines.',
+  'Whey fraise':'Saveur fraise intense pour la récup post-workout.',
+  'Whey zero':'Zéro sucre, 100% performance.',
+  'Proteine Muscle2000':'La formule pro pour des gains sérieux.',
+  'Pure Whey':'Protéine pure, sans compromis.',
+  'Whey Gold':'Le gold standard de la whey, tout simplement.',
+  'Barre energetique':'L\'énergie instantanée pour tenir la distance.',
+  'Proteine Energy':'Double effet : protéines + boost d\'énergie.',
+  'Boisson energetique':'Recharge rapide avant l\'effort.',
+  'Milkshake proteine':'Onctueux, savoureux et blindé de protéines.',
+};
+
+// ── CART ───────────────────────────────────────────────────────────
+let cart = [];
+
+function flyToCart(originEl) {
+  const fab = document.getElementById('cartFab');
+  const fabRect = fab.getBoundingClientRect();
+  const oRect = originEl.getBoundingClientRect();
+  const dot = document.createElement('div');
+  dot.className = 'fly-dot';
+  dot.style.left = (oRect.left + oRect.width / 2 - 5) + 'px';
+  dot.style.top  = (oRect.top  + oRect.height / 2 - 5) + 'px';
+  document.body.appendChild(dot);
+  const destX = fabRect.left + fabRect.width / 2 - 5;
+  const destY = fabRect.top  + fabRect.height / 2 - 5;
+  const startX = parseFloat(dot.style.left);
+  const startY = parseFloat(dot.style.top);
+  const dur = 500, t0 = performance.now();
+  function step(now) {
+    const t = Math.min((now - t0) / dur, 1);
+    const e = t < .5 ? 2*t*t : -1+(4-2*t)*t;
+    dot.style.left = (startX + (destX - startX) * e) + 'px';
+    dot.style.top  = (startY + (destY - startY) * e) + 'px';
+    dot.style.opacity = String(1 - t * 0.4);
+    dot.style.transform = 'scale(' + (1 - t * 0.5) + ')';
+    if (t < 1) requestAnimationFrame(step);
+    else {
+      dot.remove();
+      const b = document.getElementById('cartBadge');
+      b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+      setTimeout(() => b.classList.remove('bump'), 400);
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function addToCart(name, price, img, originEl) {
+  const ex = cart.find(i => i.name === name);
+  if (ex) ex.qty++;
+  else cart.push({ name, price: parseFloat(price) || 0, img: img || null, qty: 1 });
+  if (originEl) flyToCart(originEl);
+  updateCartUI();
+  const t = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = name + ' ajouté';
+  t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove('show'), 1600);
+}
+
+function updateCartUI() {
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const count = cart.reduce((s, i) => s + i.qty, 0);
+  const badge = document.getElementById('cartBadge');
+  badge.textContent = count;
+  badge.classList.toggle('show', count > 0);
+  document.getElementById('cartTotal').textContent = total.toLocaleString('fr-FR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' $';
+  document.getElementById('cartCountInfo').textContent = count + ' article' + (count > 1 ? 's' : '');
+  const el = document.getElementById('cartItems');
+  if (!cart.length) { el.innerHTML = '<div class="cart-empty-msg">Panier vide</div>'; return; }
+  el.innerHTML = cart.map((item, idx) => `
+    <div class="cart-item">
+      <div class="cart-item-img">
+        ${item.img ? `<img src="${item.img}" loading="lazy">` : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4e4770" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>`}
+      </div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-unit">${item.price.toLocaleString('fr-FR',{minimumFractionDigits:2})} $ / u.</div>
+      </div>
+      <div class="cart-item-qty">
+        <button class="qty-btn" onclick="changeQty(${idx},-1)">−</button>
+        <div class="qty-num">${item.qty}</div>
+        <button class="qty-btn" onclick="changeQty(${idx},1)">+</button>
+      </div>
+      <div class="cart-item-total">${(item.price*item.qty).toLocaleString('fr-FR',{minimumFractionDigits:2})} $</div>
+    </div>
+  `).join('');
+}
+
+function changeQty(idx, d) {
+  cart[idx].qty += d;
+  if (cart[idx].qty <= 0) cart.splice(idx, 1);
+  updateCartUI();
+}
+function clearCart() { cart = []; updateCartUI(); }
+function toggleCart() {
+  const p = document.getElementById('cartPanel'), o = document.getElementById('cartOverlay');
+  if (p.classList.contains('show')) closeCart();
+  else { updateCartUI(); p.classList.add('show'); o.classList.add('show'); }
+}
+function closeCart() {
+  document.getElementById('cartPanel').classList.remove('show');
+  document.getElementById('cartOverlay').classList.remove('show');
+}
+// ──────────────────────────────────────────────────────────────────
+
+let activeCat = 'Tous';
+
+function buildTabs() {
+  document.getElementById('tabs').innerHTML = CATS.map(c => {
+    let n;
+    if (c === 'Tous') n = DATA.filter(p => p.cat !== 'Pack' && p.cat !== 'Nouveauté').length;
+    else if (c === 'Pack') n = PACK_DATA.length;
+    else n = DATA.filter(p=>p.cat===c).length;
+    return `<div class="tab ${c===activeCat?'active':''}" onclick="setCat('${c}',this)">${c} <span class="tab-n">${n}</span></div>`;
+  }).join('');
+}
+
+function setCat(cat,el) {
+  activeCat = cat;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const main = document.getElementById('main');
+
+  if (activeCat === 'Promo de la semaine') {
+    const isPlaceholder = PROMO_IMG.includes('XXXXXXX');
+    main.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 200px);padding:28px;">
+        <div style="max-width:700px;width:100%;text-align:center;">
+          <div style="font-family:var(--font-m);font-size:9px;letter-spacing:4px;color:var(--vd);text-transform:uppercase;margin-bottom:18px;">⭐ Promo de la semaine</div>
+          ${isPlaceholder
+            ? `<div style="width:100%;aspect-ratio:16/9;background:var(--bg4);border:1px dashed var(--border2);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--text3);">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <div style="font-family:var(--font-m);font-size:9px;letter-spacing:3px;text-transform:uppercase;opacity:.5;">Colle ton lien Imgur dans le code</div>
+              </div>`
+            : `<img src="${PROMO_IMG}" alt="Promo de la semaine" style="width:100%;border-radius:14px;border:1px solid var(--border2);display:block;">`
+          }
+        </div>
+      </div>`;
+    return;
+  }
+
+  if (activeCat === 'Pack') {
+    const packs = q ? PACK_DATA.filter(p=>p.name.toLowerCase().includes(q)) : PACK_DATA;
+    main.innerHTML = `
+      <div class="section-bar">
+        <div class="section-label">Packs — ${packs.length} pack${packs.length>1?'s':''}</div>
+      </div>
+      <div class="pack-grid">
+        ${packs.map(p => `
+          <div class="pack-card">
+            <div class="pack-card-img">
+              ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : `<div class="no-photo"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo</span></div>`}
+            </div>
+            <div class="pack-card-body">
+              <div class="pack-ref">${p.ref}</div>
+              <div class="pack-name">${p.name.toUpperCase()}</div>
+              <div class="pack-tagline">${p.tagline}</div>
+              <div class="pack-footer">
+                <div class="pack-price">${p.price.toLocaleString('fr-FR')} $</div>
+                <button class="pack-btn" onclick="addToCart('${p.name.replace(/'/g,"\\'")}',${p.price},'${(p.img||'').replace(/'/g,"\\'")}',this)">AJOUTER +</button>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>`;
+    return;
+  }
+
+  let list = DATA.filter(p => {
+    const mc = activeCat==='Tous' ? p.cat !== 'Pack' && p.cat !== 'Nouveauté' : p.cat===activeCat;
+    const mq = !q || p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
+    return mc && mq;
+  });
+
+  if (!list.length) { main.innerHTML='<div class="empty"><p>Aucun article trouvé</p></div>'; return; }
+
+  const groups = {};
+  list.forEach(p => { if(!groups[p.cat]) groups[p.cat]=[]; groups[p.cat].push(p); });
+
+  let html = `<div class="section-bar">
+    <div class="section-label">${activeCat==='Tous'?'Catalogue complet':activeCat} — ${list.length} article${list.length>1?'s':''}</div>
+    <select class="sort-select" onchange="sortD(this.value)">
+      <option value="default">Ordre par défaut</option>
+      <option value="asc">Prix ↑</option>
+      <option value="desc">Prix ↓</option>
+      <option value="alpha">A – Z</option>
+    </select>
+  </div>`;
+
+  const catsToRender = activeCat==='Tous'
+    ? Object.keys(CAT_ICONS).filter(c=>c!=='Pack'&&c!=='Promo de la semaine'&&c!=='Nouveauté')
+    : [activeCat];
+
+  for (const cat of catsToRender) {
+    const items = groups[cat] || [];
+    if (!items.length) continue;
+    html += `<div class="cat-header"><div class="cat-icon">${CAT_ICONS[cat]||'📁'}</div><div class="cat-title">${cat}</div><div class="cat-count">${items.length} article${items.length!==1?'s':''}</div></div>`;
+    html += `<div class="pgrid">${items.map(p => {
+      const stC = p.status==='Epuise'?'st-sold':p.status==='En stock'?'st-stock':p.status==='Nouvel achat'?'st-new':'st-dispo';
+      const stL = p.status==='Epuise'?'Épuisé':p.status==='En stock'?'En stock':p.status==='Nouvel achat'?'Nouveau':'Dispo';
+      const sn = p.name.replace(/'/g,"\\'");
+      const si = (p.img||'').replace(/'/g,"\\'");
+      const tl = ITEM_TAGLINE[p.name] || '';
+      return `<div class="card" onclick="addToCart('${sn}',${p.sell||0},'${si}',this)">
+        <div class="card-img">
+          ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : `<div class="no-photo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo</span></div>`}
+        </div>
+        <div class="card-top"><div class="card-name">${p.name}</div></div>
+        ${tl ? `<div class="card-tagline">${tl}</div>` : ''}
+        <div class="card-body">
+          <div class="price-row">
+            <div class="price-sell"><span class="lbl">Prix</span><span class="val">${fmt(p.sell)}</span></div>
+          </div>
+          <div class="bottom-row">
+            <div class="stock-badge ${stC}">${stL}</div>
+            <button class="add-btn" onclick="event.stopPropagation();addToCart('${sn}',${p.sell||0},'${si}',this)">+</button>
+          </div>
+        </div>
+      </div>`;
+    }).join('')}</div>`;
+  }
+  main.innerHTML = html;
+}
+
+function sortD(val) {
+  if (val==='asc') DATA.sort((a,b)=>(a.sell||0)-(b.sell||0));
+  else if (val==='desc') DATA.sort((a,b)=>(b.sell||0)-(a.sell||0));
+  else if (val==='alpha') DATA.sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+  else DATA.sort((a,b)=>a.cat.localeCompare(b.cat,'fr')||a.name.localeCompare(b.name,'fr'));
+  render();
+}
+
+function tick() {
+  const n = new Date();
+  document.getElementById('clock').textContent = String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
+  const d=['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'], mo=['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+  document.getElementById('cdate').textContent = d[n.getDay()]+' '+n.getDate()+' '+mo[n.getMonth()];
+}
+
+function initSlider() {
+  const tabs = document.getElementById('tabs');
+  const slider = document.getElementById('tabsSlider');
+  function getMax() { return Math.max(0, tabs.scrollWidth - tabs.clientWidth); }
+  slider.addEventListener('input', () => { tabs.scrollLeft = (slider.value / 100) * getMax(); });
+  tabs.addEventListener('scroll', () => { const m = getMax(); slider.value = m > 0 ? (tabs.scrollLeft / m) * 100 : 0; });
+  window.addEventListener('resize', () => { const m = getMax(); slider.value = m > 0 ? (tabs.scrollLeft / m) * 100 : 0; });
+}
+
+buildTabs();
+render(); tick(); setInterval(tick, 15000);
+setTimeout(initSlider, 50);
+updateCartUI();
+
+setTimeout(() => {
+  const s = document.getElementById('splash');
+  s.classList.add('hide');
+  setTimeout(() => s.remove(), 700);
+}, 2400);
+</script>
+</body>
+</html>], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Whey zero',           'Zone sportive plage', 4,  8,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Proteine Muscle2000', 'Zone sportive plage', 10, 20, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Pure Whey',           'Zone sportive plage', 2,  4,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Whey Gold',           'Zone sportive plage', 5,  10, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Barre energetique',   'Zone sportive plage', 2,  4,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Proteine Energy',     'Zone sportive plage', 2,  4,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Boisson energetique', 'Zone sportive plage', 2,  4,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+  ['Power', 'Milkshake proteine',  'Zone sportive plage', 2,  4,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
+];
+
+// ── PACKS ──────────────────────────────────────────────────────────
+const PACK_DATA = [
+  { ref:'GS-PCK-001', name:'Pack Pêche',      img:null, price:600,  tagline:'55 appâts + 1 canne à pêche. Tout pour une session réussie.' },
+  { ref:'GS-PCK-002', name:'Pack Réparation', img:null, price:660,  tagline:'1 foret de perceuse + 1 grosse perceuse. Le duo parfait pour vos travaux.' },
+  { ref:'GS-PCK-003', name:'Pack Jardinage',  img:null, price:450,  tagline:'9 pots + 9 fertilisants + 27 bouteilles + 1 lampe violette. La totale pour votre jardin.' },
+  { ref:'GS-PCK-004', name:'Pack Artiste',    img:null, price:2800, tagline:'1 éponge + 1 spray tag. Le pack du vrai artiste de rue.' },
+];
+
+// ─── CHANGER L'IMAGE PROMO ICI ─────────────────────────────────────
+const PROMO_IMG = 'https://i.imgur.com/XXXXXXX.jpg'; // <-- colle ton lien Imgur ici
+// ───────────────────────────────────────────────────────────────────
+
+const DATA = RAW.map(r => ({ cat:r[0], name:r[1], src:r[2], buy:r[3], sell:r[4], status:r[5], img:r[6]||null }));
+
+const CAT_ICONS = {
+  'Promo de la semaine': '⭐',
+  'Pack': '📦',
+  'Nouveauté': '🆕',
+  'Alimentaire': '🍎',
+  'Jardinage': '🌿',
+  'Entretien': '🛢️',
+  'Papeterie': '📄',
+  'Quotidien': '🛍️',
+  'Quincaillerie': '🔧',
+  'Power': '💪'
+};
+const CATS = ['Tous', ...Object.keys(CAT_ICONS)];
+
+function fmt(v) {
+  if (v === null || v === undefined) return 'xx,xx $';
+  return v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' $';
+}
+
+const ITEM_TAGLINE = {
+  'Fertilisant':'Booste la croissance de vos plantes en un rien de temps.',
+  'Pot de Fleur':'Pour cultiver en beauté, dans le style Grove Street.',
+  'Table':'Solide, pratique, indispensable pour votre espace.',
+  'Terre':'De la bonne terre pour faire pousser n\'importe quoi.',
+  'Bac de jardinage':'Grand format pour les projets ambitieux.',
+  'Lumiere violette':'La lumière idéale pour faire pousser en intérieur.',
+  'Cisaille':'Coupe net, coupe propre. L\'outil du pro.',
+  'Rose':'Une rose fraîche, livrée avec soin.',
+  'Bouquet de Roses':'Un bouquet de roses pour marquer les esprits.',
+  'Bouquet de Fleurs':'Un bouquet qui en dit plus que les mots.',
+  'Rose eternelle':'Elle ne fane jamais. Un cadeau pour l\'éternité.',
+  'BMX 2 Places':'Pour rider à deux dans les rues de la ville.',
+  'Trotinette Electrique':'Glisse en silence, arrive en premier.',
+  'Doudou Pinguin':'Un peu de douceur dans ce monde de brutes.',
+  'Anneau':'Le symbole ultime, forgé pour durer.',
+  'Anneau de Mariage':'Pour sceller les liens les plus précieux.',
+  'Bobine de Cuivre':'Du cuivre pur pour vos montages électriques.',
+  'Pile Verte':'Petite pile, grande autonomie.',
+  'Outils':'Le kit de base pour ne jamais être à court.',
+  'Perceuse':'Compacte et efficace pour tous vos perçages.',
+  'Grosse Perceuse':'Pour les gros travaux, elle ne lâche pas.',
+  'Pince coupante':'Coupe fils et câbles avec précision.',
+  'Pince pour plaque':'Indispensable pour la pose de plaques.',
+  'Perceuse manuel':'Simple, fiable, sans batterie à charger.',
+  'Foret de Perceuse':'Perce dans le béton comme dans du beurre.',
+  'Eponge pour voiture':'Douceur maximale pour votre carrosserie.',
+  'Bicarbonate':'Le produit miracle pour nettoyer tout et n\'importe quoi.',
+  'Caoutchouc (Craft)':'Du caoutchouc artisanal, souple et résistant.',
+  'Caoutchouc':'Polyvalent et durable pour toutes vos réparations.',
+  'Huile':'Lubrifie et protège vos mécaniques.',
+  'Huile Noire':'Haute viscosité pour les moteurs exigeants.',
+  'Huile Shell':'Qualité premium pour une protection maximale.',
+  'Batterie de voiture':'Recharge rapide, longue durée de vie.',
+  'Kit de Nettoyage':'Tout ce qu\'il faut pour un véhicule impeccable.',
+  'Batterie':'Petite batterie, fiable et rechargeable.',
+  'Colle':'Colle forte, sèche vite, tient longtemps.',
+  'Sachet vide':'Pour conditionner et transporter discrètement.',
+  'Encre':'Noire et intense, pour une impression parfaite.',
+  'Porte Document':'Garde vos papiers importants en sécurité.',
+  'Porte Feuille':'Slim et solide, pour vos essentiels.',
+  'Trousseau de cles':'Organize vos clés avec style.',
+  'Papier a rouler':'Pour les amateurs de l\'authentique.',
+  'Carte SIM':'Connexion instantanée, partout dans la ville.',
+  'Appat':'L\'appât parfait pour ferrer du gros.',
+  'Elastique':'Toujours utile, toujours là quand il le faut.',
+  'Ticket a gratter':'Tente ta chance, tu sais jamais.',
+  'Post it':'Note tout, oublie rien.',
+  'Carte SD':'Stocke plus, efface moins.',
+  'Ballon de Football':'Pour les matchs qui comptent vraiment.',
+  'Ballon de Basket':'Rebond parfait, prise en main irréprochable.',
+  'Canne a peche':'Légère et solide pour des heures au bord de l\'eau.',
+  'Skate':'Quatre roues pour conquérir les rues.',
+  'Telephone Basique':'Simple, solide, ça appelle et ça tient la charge.',
+  'Palette de maquillage':'Toutes les couleurs pour se réinventer chaque jour.',
+  'BMX':'Pour rider dans les rues sans se faire remarquer.',
+  'Porte cle':'Un petit détail qui dit beaucoup.',
+  'Telephone':'Puissant, rapide, toujours connecté.',
+  'Doudou':'Un peu de douceur dans ce monde de brutes.',
+  'Appareil Photo':'Capture chaque moment comme un pro.',
+  'Galaxy':'Le flagship pour ceux qui veulent le meilleur.',
+  'Tablette':'Grand écran, grande puissance.',
+  'Eponge':'Spéciale tags, absorption totale.',
+  'Spray Tag':'La couleur qui marque les esprits et les murs.',
+  'Creme glacee':'Fraîche et crémeuse, parfaite après une longue journée.',
+  'Pot Creme glacee':'Le grand format pour partager ou pas.',
+  'Creme Fraiche':'Onctueuse et naturelle, elle relève tout.',
+  'Cola':'La classique qui désaltère comme il faut.',
+  'Moutarde':'Du piquant pour ceux qui savent ce qu\'ils veulent.',
+  'Coquille a tacos':'Croustillante à souhait pour vos tacos maison.',
+  'Tortilla':'Souple et généreuse, elle enroule tout.',
+  'Bouteille eau':'Hydratation pure, indispensable sur le terrain.',
+  'Bonbon cola':'Le goût cola en version pocket.',
+  'Bonbon tada':'Une surprise à chaque bouchée.',
+  'Bonbon Drag':'Petits mais intenses, ils cartonnent.',
+  'Bonbon':'Le classique qui fait toujours plaisir.',
+  'Barre choco caramel':'Chocolat et caramel, le combo gagnant.',
+  'Barre chocolatee':'L\'énergie du chocolat quand il le faut.',
+  'Baguette':'Fraîche du jour, croustillante à souhait.',
+  'Pistache':'Salées et grillées, impossibles à arrêter.',
+  'Noix cajou':'Douces et croquantes, le snack parfait.',
+  'Brique citron':'L\'acidité qui réveille, format pratique.',
+  'Noix':'Naturelles et nourrissantes, straight from the tree.',
+  'Menu decouverte':'Un repas complet pour découvrir nos spécialités.',
+  'Menu festin':'Le grand menu pour les grandes occasions.',
+  'Herisson':'Petit prix, grand goût.',
+  'Pancakes Proteines':'Le petit déj des champions, riche en protéines.',
+  'Whey fraise':'Saveur fraise intense pour la récup post-workout.',
+  'Whey zero':'Zéro sucre, 100% performance.',
+  'Proteine Muscle2000':'La formule pro pour des gains sérieux.',
+  'Pure Whey':'Protéine pure, sans compromis.',
+  'Whey Gold':'Le gold standard de la whey, tout simplement.',
+  'Barre energetique':'L\'énergie instantanée pour tenir la distance.',
+  'Proteine Energy':'Double effet : protéines + boost d\'énergie.',
+  'Boisson energetique':'Recharge rapide avant l\'effort.',
+  'Milkshake proteine':'Onctueux, savoureux et blindé de protéines.',
+};
+
+// ── CART ───────────────────────────────────────────────────────────
+let cart = [];
+
+function flyToCart(originEl) {
+  const fab = document.getElementById('cartFab');
+  const fabRect = fab.getBoundingClientRect();
+  const oRect = originEl.getBoundingClientRect();
+  const dot = document.createElement('div');
+  dot.className = 'fly-dot';
+  dot.style.left = (oRect.left + oRect.width / 2 - 5) + 'px';
+  dot.style.top  = (oRect.top  + oRect.height / 2 - 5) + 'px';
+  document.body.appendChild(dot);
+  const destX = fabRect.left + fabRect.width / 2 - 5;
+  const destY = fabRect.top  + fabRect.height / 2 - 5;
+  const startX = parseFloat(dot.style.left);
+  const startY = parseFloat(dot.style.top);
+  const dur = 500, t0 = performance.now();
+  function step(now) {
+    const t = Math.min((now - t0) / dur, 1);
+    const e = t < .5 ? 2*t*t : -1+(4-2*t)*t;
+    dot.style.left = (startX + (destX - startX) * e) + 'px';
+    dot.style.top  = (startY + (destY - startY) * e) + 'px';
+    dot.style.opacity = String(1 - t * 0.4);
+    dot.style.transform = 'scale(' + (1 - t * 0.5) + ')';
+    if (t < 1) requestAnimationFrame(step);
+    else {
+      dot.remove();
+      const b = document.getElementById('cartBadge');
+      b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+      setTimeout(() => b.classList.remove('bump'), 400);
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+function addToCart(name, price, img, originEl) {
+  const ex = cart.find(i => i.name === name);
+  if (ex) ex.qty++;
+  else cart.push({ name, price: parseFloat(price) || 0, img: img || null, qty: 1 });
+  if (originEl) flyToCart(originEl);
+  updateCartUI();
+  const t = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = name + ' ajouté';
+  t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(() => t.classList.remove('show'), 1600);
+}
+
+function updateCartUI() {
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const count = cart.reduce((s, i) => s + i.qty, 0);
+  const badge = document.getElementById('cartBadge');
+  badge.textContent = count;
+  badge.classList.toggle('show', count > 0);
+  document.getElementById('cartTotal').textContent = total.toLocaleString('fr-FR', {minimumFractionDigits:2, maximumFractionDigits:2}) + ' $';
+  document.getElementById('cartCountInfo').textContent = count + ' article' + (count > 1 ? 's' : '');
+  const el = document.getElementById('cartItems');
+  if (!cart.length) { el.innerHTML = '<div class="cart-empty-msg">Panier vide</div>'; return; }
+  el.innerHTML = cart.map((item, idx) => `
+    <div class="cart-item">
+      <div class="cart-item-img">
+        ${item.img ? `<img src="${item.img}" loading="lazy">` : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4e4770" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>`}
+      </div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-unit">${item.price.toLocaleString('fr-FR',{minimumFractionDigits:2})} $ / u.</div>
+      </div>
+      <div class="cart-item-qty">
+        <button class="qty-btn" onclick="changeQty(${idx},-1)">−</button>
+        <div class="qty-num">${item.qty}</div>
+        <button class="qty-btn" onclick="changeQty(${idx},1)">+</button>
+      </div>
+      <div class="cart-item-total">${(item.price*item.qty).toLocaleString('fr-FR',{minimumFractionDigits:2})} $</div>
+    </div>
+  `).join('');
+}
+
+function changeQty(idx, d) {
+  cart[idx].qty += d;
+  if (cart[idx].qty <= 0) cart.splice(idx, 1);
+  updateCartUI();
+}
+function clearCart() { cart = []; updateCartUI(); }
+function toggleCart() {
+  const p = document.getElementById('cartPanel'), o = document.getElementById('cartOverlay');
+  if (p.classList.contains('show')) closeCart();
+  else { updateCartUI(); p.classList.add('show'); o.classList.add('show'); }
+}
+function closeCart() {
+  document.getElementById('cartPanel').classList.remove('show');
+  document.getElementById('cartOverlay').classList.remove('show');
+}
+// ──────────────────────────────────────────────────────────────────
+
+let activeCat = 'Tous';
+
+function buildTabs() {
+  document.getElementById('tabs').innerHTML = CATS.map(c => {
+    let n;
+    if (c === 'Tous') n = DATA.filter(p => p.cat !== 'Pack' && p.cat !== 'Nouveauté').length;
+    else if (c === 'Pack') n = PACK_DATA.length;
+    else n = DATA.filter(p=>p.cat===c).length;
+    return `<div class="tab ${c===activeCat?'active':''}" onclick="setCat('${c}',this)">${c} <span class="tab-n">${n}</span></div>`;
+  }).join('');
+}
+
+function setCat(cat,el) {
+  activeCat = cat;
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.trim().toLowerCase();
+  const main = document.getElementById('main');
+
+  if (activeCat === 'Promo de la semaine') {
+    const isPlaceholder = PROMO_IMG.includes('XXXXXXX');
+    main.innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:center;min-height:calc(100vh - 200px);padding:28px;">
+        <div style="max-width:700px;width:100%;text-align:center;">
+          <div style="font-family:var(--font-m);font-size:9px;letter-spacing:4px;color:var(--vd);text-transform:uppercase;margin-bottom:18px;">⭐ Promo de la semaine</div>
+          ${isPlaceholder
+            ? `<div style="width:100%;aspect-ratio:16/9;background:var(--bg4);border:1px dashed var(--border2);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--text3);">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                <div style="font-family:var(--font-m);font-size:9px;letter-spacing:3px;text-transform:uppercase;opacity:.5;">Colle ton lien Imgur dans le code</div>
+              </div>`
+            : `<img src="${PROMO_IMG}" alt="Promo de la semaine" style="width:100%;border-radius:14px;border:1px solid var(--border2);display:block;">`
+          }
+        </div>
+      </div>`;
+    return;
+  }
+
+  if (activeCat === 'Pack') {
+    const packs = q ? PACK_DATA.filter(p=>p.name.toLowerCase().includes(q)) : PACK_DATA;
+    main.innerHTML = `
+      <div class="section-bar">
+        <div class="section-label">Packs — ${packs.length} pack${packs.length>1?'s':''}</div>
+      </div>
+      <div class="pack-grid">
+        ${packs.map(p => `
+          <div class="pack-card">
+            <div class="pack-card-img">
+              ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : `<div class="no-photo"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo</span></div>`}
+            </div>
+            <div class="pack-card-body">
+              <div class="pack-ref">${p.ref}</div>
+              <div class="pack-name">${p.name.toUpperCase()}</div>
+              <div class="pack-tagline">${p.tagline}</div>
+              <div class="pack-footer">
+                <div class="pack-price">${p.price.toLocaleString('fr-FR')} $</div>
+                <button class="pack-btn" onclick="addToCart('${p.name.replace(/'/g,"\\'")}',${p.price},'${(p.img||'').replace(/'/g,"\\'")}',this)">AJOUTER +</button>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>`;
+    return;
+  }
+
+  let list = DATA.filter(p => {
+    const mc = activeCat==='Tous' ? p.cat !== 'Pack' && p.cat !== 'Nouveauté' : p.cat===activeCat;
+    const mq = !q || p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
+    return mc && mq;
+  });
+
+  if (!list.length) { main.innerHTML='<div class="empty"><p>Aucun article trouvé</p></div>'; return; }
+
+  const groups = {};
+  list.forEach(p => { if(!groups[p.cat]) groups[p.cat]=[]; groups[p.cat].push(p); });
+
+  let html = `<div class="section-bar">
+    <div class="section-label">${activeCat==='Tous'?'Catalogue complet':activeCat} — ${list.length} article${list.length>1?'s':''}</div>
+    <select class="sort-select" onchange="sortD(this.value)">
+      <option value="default">Ordre par défaut</option>
+      <option value="asc">Prix ↑</option>
+      <option value="desc">Prix ↓</option>
+      <option value="alpha">A – Z</option>
+    </select>
+  </div>`;
+
+  const catsToRender = activeCat==='Tous'
+    ? Object.keys(CAT_ICONS).filter(c=>c!=='Pack'&&c!=='Promo de la semaine'&&c!=='Nouveauté')
+    : [activeCat];
+
+  for (const cat of catsToRender) {
+    const items = groups[cat] || [];
+    if (!items.length) continue;
+    html += `<div class="cat-header"><div class="cat-icon">${CAT_ICONS[cat]||'📁'}</div><div class="cat-title">${cat}</div><div class="cat-count">${items.length} article${items.length!==1?'s':''}</div></div>`;
+    html += `<div class="pgrid">${items.map(p => {
+      const stC = p.status==='Epuise'?'st-sold':p.status==='En stock'?'st-stock':p.status==='Nouvel achat'?'st-new':'st-dispo';
+      const stL = p.status==='Epuise'?'Épuisé':p.status==='En stock'?'En stock':p.status==='Nouvel achat'?'Nouveau':'Dispo';
+      const sn = p.name.replace(/'/g,"\\'");
+      const si = (p.img||'').replace(/'/g,"\\'");
+      const tl = ITEM_TAGLINE[p.name] || '';
+      return `<div class="card" onclick="addToCart('${sn}',${p.sell||0},'${si}',this)">
+        <div class="card-img">
+          ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : `<div class="no-photo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo</span></div>`}
+        </div>
+        <div class="card-top"><div class="card-name">${p.name}</div></div>
+        ${tl ? `<div class="card-tagline">${tl}</div>` : ''}
+        <div class="card-body">
+          <div class="price-row">
+            <div class="price-sell"><span class="lbl">Prix</span><span class="val">${fmt(p.sell)}</span></div>
+          </div>
+          <div class="bottom-row">
+            <div class="stock-badge ${stC}">${stL}</div>
+            <button class="add-btn" onclick="event.stopPropagation();addToCart('${sn}',${p.sell||0},'${si}',this)">+</button>
+          </div>
+        </div>
+      </div>`;
+    }).join('')}</div>`;
+  }
+  main.innerHTML = html;
+}
+
+function sortD(val) {
+  if (val==='asc') DATA.sort((a,b)=>(a.sell||0)-(b.sell||0));
+  else if (val==='desc') DATA.sort((a,b)=>(b.sell||0)-(a.sell||0));
+  else if (val==='alpha') DATA.sort((a,b)=>a.name.localeCompare(b.name,'fr'));
+  else DATA.sort((a,b)=>a.cat.localeCompare(b.cat,'fr')||a.name.localeCompare(b.name,'fr'));
+  render();
+}
+
+function tick() {
+  const n = new Date();
+  document.getElementById('clock').textContent = String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
+  const d=['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'], mo=['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
+  document.getElementById('cdate').textContent = d[n.getDay()]+' '+n.getDate()+' '+mo[n.getMonth()];
+}
+
+function initSlider() {
+  const tabs = document.getElementById('tabs');
+  const slider = document.getElementById('tabsSlider');
+  function getMax() { return Math.max(0, tabs.scrollWidth - tabs.clientWidth); }
+  slider.addEventListener('input', () => { tabs.scrollLeft = (slider.value / 100) * getMax(); });
+  tabs.addEventListener('scroll', () => { const m = getMax(); slider.value = m > 0 ? (tabs.scrollLeft / m) * 100 : 0; });
+  window.addEventListener('resize', () => { const m = getMax(); slider.value = m > 0 ? (tabs.scrollLeft / m) * 100 : 0; });
+}
+
+buildTabs();
+render(); tick(); setInterval(tick, 15000);
+setTimeout(initSlider, 50);
+updateCartUI();
+
+setTimeout(() => {
+  const s = document.getElementById('splash');
+  s.classList.add('hide');
+  setTimeout(() => s.remove(), 700);
+}, 2400);
+</script>
+</body>
+</html>], // 'https://i.imgur.com/XXXXXXX.jpg'
   ['Power', 'Whey zero',           'Zone sportive plage', 4,  8,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
   ['Power', 'Proteine Muscle2000', 'Zone sportive plage', 10, 20, '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
   ['Power', 'Pure Whey',           'Zone sportive plage', 2,  4,  '', null], // 'https://i.imgur.com/XXXXXXX.jpg'
