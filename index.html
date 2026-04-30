@@ -212,6 +212,14 @@
   .splash-bar { height: 100%; width: 0%; border-radius: 2px; background: linear-gradient(90deg, var(--vd), var(--v)); box-shadow: 0 0 10px var(--v); animation: splashLoad 1.2s cubic-bezier(.4,0,.2,1) .9s forwards; }
   .splash-glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(124,92,191,.25) 0%, transparent 70%); pointer-events: none; animation: splashPulse 2s ease-in-out infinite; }
  
+  /* ── LIGHTBOX ── */
+  .lightbox { position: fixed; inset: 0; z-index: 99990; background: rgba(0,0,0,.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .25s; }
+  .lightbox.show { opacity: 1; pointer-events: all; }
+  .lightbox img { max-width: 90vw; max-height: 88vh; border-radius: var(--radius); box-shadow: 0 0 60px rgba(167,139,250,.3); transform: scale(.92); transition: transform .25s cubic-bezier(.34,1.56,.64,1); }
+  .lightbox.show img { transform: scale(1); }
+  .lightbox-close { position: absolute; top: 20px; right: 24px; font-size: 28px; color: var(--text2); cursor: pointer; background: var(--bg4); border: 1px solid var(--border2); border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; transition: color .15s, background .15s; }
+  .lightbox-close:hover { color: var(--v); background: var(--vglow); }
+ 
   @keyframes splashIn   { to { opacity:1; transform:translateY(0); } }
   @keyframes splashFade { to { opacity:1; } }
   @keyframes splashLoad { to { width:100%; } }
@@ -302,6 +310,12 @@
   <div class="cart-badge" id="cartBadge">0</div>
 </button>
  
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+  <img id="lightboxImg" src="" alt="">
+</div>
+ 
 <script>
 // ════════════════════════════════════════════════════════════════════
 //  FORMAT : [Catégorie, Nom, Source, Achat, Vente, Statut, IMAGE]
@@ -317,7 +331,7 @@ const RAW = [
   ['Jardinage', 'Terre',              'Youtools', 0.20, 12,   '', 'https://i.imgur.com/nl6Fy8L.jpeg'],
   ['Jardinage', 'Bac de jardinage',   'Youtools', 10,   18,   '', 'https://i.imgur.com/jph66BW.jpeg'],
   ['Jardinage', 'Lumiere violette',   'Craft',    0,    36,   '', 'https://i.imgur.com/tOodLxC.jpeg'],
-  ['Jardinage', 'Cisaille',           'Craft',    750,  1050, '', 'https://i.imgur.com/JgzR8uI.jpeg'],
+  ['Jardinage', 'Cisaille',           'Craft',    750,  1050, '', 'https://i.postimg.cc/t4w8Fngb/image-2026-04-30-222857736.png'],
  
   // ── NOUVEAUTÉ ──────────────────────────────────────────────────
   ['Nouveauté', 'Rose',                 'Craft', 0,   250,  '', 'https://i.imgur.com/VlNwjqh.jpeg'],
@@ -331,8 +345,8 @@ const RAW = [
   ['Nouveauté', 'Anneau de Mariage',    'Craft', 0,   400,  '', 'https://i.imgur.com/KVDXnRp.jpeg'],
  
   // ── QUINCAILLERIE ──────────────────────────────────────────────
-  ['Quincaillerie', 'Bobine de Cuivre',  'Craft',    0,   null, '', 'https://i.imgur.com/KVDXnRp.jpeg'],
-  ['Quincaillerie', 'Pile Verte',        'Youtools', 1,   3,   '', 'https://i.imgur.com/KVDXnRp.jpeg'],
+  ['Quincaillerie', 'Bobine de Cuivre',  'Craft',    0,   null, '', 'https://i.postimg.cc/3wD5qCqW/image-2026-04-30-222720155.png'],
+  ['Quincaillerie', 'Pile Verte',        'Youtools', 1,   3,   '', 'https://i.postimg.cc/Lswd5T4R/image-2026-04-30-174330077.png'],
   ['Quincaillerie', 'Outils',            'Youtools', 3,   5,   '', 'https://i.postimg.cc/vDR4b9jC/image-2026-04-30-172314805.png'],
   ['Quincaillerie', 'Perceuse',          'Youtools', 5,   10,  '', 'https://i.postimg.cc/W47g89K6/image-2026-04-30-172145766.png'],
   ['Quincaillerie', 'Grosse Perceuse',   'Youtools', 7,   12,  '', 'https://i.postimg.cc/6q49fxNg/image-2026-04-30-222100571.png'],
@@ -423,10 +437,10 @@ const RAW = [
  
 // ── PACKS ──────────────────────────────────────────────────────────
 const PACK_DATA = [
-  { ref:'GS-PCK-001', name:'Pack Pêche',      img:null, price:600,  tagline:'55 appâts + 1 canne à pêche. Tout pour une session réussie.' },
-  { ref:'GS-PCK-002', name:'Pack Réparation', img:null, price:660,  tagline:'1 foret de perceuse + 1 grosse perceuse. Le duo parfait pour vos travaux.' },
-  { ref:'GS-PCK-003', name:'Pack Jardinage',  img:null, price:450,  tagline:'9 pots + 9 fertilisants + 27 bouteilles + 1 lampe violette. La totale pour votre jardin.' },
-  { ref:'GS-PCK-004', name:'Pack Artiste',    img:null, price:2800, tagline:'1 éponge + 1 spray tag. Le pack du vrai artiste de rue.' },
+  { ref:'GS-PCK-001', name:'Pack Pêche',      img:'https://i.postimg.cc/WzywxrKY/image-2026-04-30-223231522.png', price:600,  tagline:'55 appâts + 1 canne à pêche. Tout pour une session réussie.' },
+  { ref:'GS-PCK-002', name:'Pack Réparation', img:'https://i.postimg.cc/XqBCGP1V/image-2026-04-30-223514208.png', price:660,  tagline:'1 foret de perceuse + 1 grosse perceuse. Le duo parfait pour vos travaux.' },
+  { ref:'GS-PCK-003', name:'Pack Jardinage',  img:'https://i.postimg.cc/9M6GpV7C/image-2026-04-30-223818977.png', price:450,  tagline:'9 pots + 9 fertilisants + 27 bouteilles + 1 lampe violette. La totale pour votre jardin.' },
+  { ref:'GS-PCK-004', name:'Pack Artiste',    img:'https://i.postimg.cc/g05Rzd4S/image-2026-04-30-223940042.png', price:2800, tagline:'1 éponge + 1 spray tag. Le pack du vrai artiste de rue.' },
 ];
  
 // ─── CHANGER L'IMAGE PROMO ICI ─────────────────────────────────────
@@ -551,6 +565,18 @@ const ITEM_TAGLINE = {
   'Boisson energetique':'Recharge rapide avant l\'effort.',
   'Milkshake proteine':'Onctueux, savoureux et blindé de protéines.',
 };
+ 
+// ── LIGHTBOX ───────────────────────────────────────────────────────
+function openLightbox(src, e) {
+  e.stopPropagation();
+  document.getElementById('lightboxImg').src = src;
+  document.getElementById('lightbox').classList.add('show');
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('show');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+// ──────────────────────────────────────────────────────────────────
  
 // ── CART ───────────────────────────────────────────────────────────
 let cart = [];
@@ -751,7 +777,7 @@ function render() {
       const tl = ITEM_TAGLINE[p.name] || '';
       return `<div class="card" onclick="addToCart('${sn}',${p.sell||0},'${si}',this)">
         <div class="card-img">
-          ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy">` : `<div class="no-photo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo</span></div>`}
+          ${p.img ? `<img src="${p.img}" alt="${p.name}" loading="lazy" onclick="openLightbox('${si}',event)" style="cursor:zoom-in;">` : `<div class="no-photo"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo</span></div>`}
         </div>
         <div class="card-top"><div class="card-name">${p.name}</div></div>
         ${tl ? `<div class="card-tagline">${tl}</div>` : ''}
@@ -807,3 +833,4 @@ setTimeout(() => {
 </script>
 </body>
 </html>
+ 
