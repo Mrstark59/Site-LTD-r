@@ -219,7 +219,7 @@
   .lightbox.show img { transform: scale(1); }
   .lightbox-close { position: absolute; top: 20px; right: 24px; font-size: 28px; color: var(--text2); cursor: pointer; background: var(--bg4); border: 1px solid var(--border2); border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; transition: color .15s, background .15s; }
   .lightbox-close:hover { color: var(--v); background: var(--vglow); }
- 
+
   @keyframes splashIn   { to { opacity:1; transform:translateY(0); } }
   @keyframes splashFade { to { opacity:1; } }
   @keyframes splashLoad { to { width:100%; } }
@@ -315,7 +315,7 @@
   <div class="lightbox-close" onclick="closeLightbox()">✕</div>
   <img id="lightboxImg" src="" alt="">
 </div>
- 
+
 <script>
 // ════════════════════════════════════════════════════════════════════
 //  FORMAT : [Catégorie, Nom, Source, Achat, Vente, Statut, IMAGE]
@@ -399,14 +399,14 @@ const RAW = [
   ['Quotidien', 'Spray Tag',             'Caisse',             1250, 1900, '', null],
  
   // ── ALIMENTAIRE ────────────────────────────────────────────────
-  ['Alimentaire', 'Creme glacee',       'Caisse',             1,   2,   '', null],
-  ['Alimentaire', 'Pot Creme glacee',   'Caisse',             1,   2,   '', null],
-  ['Alimentaire', 'Creme Fraiche',      'Caisse',             1,   2,   '', null],
-  ['Alimentaire', 'Cola',               'Caisse',             2,   4,   '', null],
-  ['Alimentaire', 'Moutarde',           'Caisse',             1,   2,   '', null],
-  ['Alimentaire', 'Coquille a tacos',   'Caisse',             1,   2,   '', null],
-  ['Alimentaire', 'Tortilla',           'Caisse',             1,   2,   '', null],
-  ['Alimentaire', 'Bouteille eau',      'Caisse',             5,   10,  '', null],
+  ['Alimentaire', 'Creme glacee',       'Caisse',             1,   2,   '', 'https://i.postimg.cc/JhV9DxZj/image-2026-05-01-072013256.png'],
+  ['Alimentaire', 'Pot Creme glacee',   'Caisse',             1,   2,   '', 'https://i.postimg.cc/CLRtcX4B/image-2026-05-01-072049084.png'],
+  ['Alimentaire', 'Creme Fraiche',      'Caisse',             1,   2,   '', 'https://i.postimg.cc/d0w5cxGz/image-2026-05-01-072303805.png'],
+  ['Alimentaire', 'Cola',               'Caisse',             2,   4,   '', 'https://i.postimg.cc/1R8hd8mX/image-2026-05-01-072320710.png'],
+  ['Alimentaire', 'Moutarde',           'Caisse',             1,   2,   '', 'https://i.postimg.cc/2jbMwgG6/image-2026-05-01-072519206.png'],
+  ['Alimentaire', 'Coquille a tacos',   'Caisse',             1,   2,   '', 'https://i.postimg.cc/8CznrYsc/image-2026-05-01-072610280.png'],
+  ['Alimentaire', 'Tortilla',           'Caisse',             1,   2,   '', 'https://i.postimg.cc/gj8MWFtT/image-2026-05-01-072648240.png'],
+  ['Alimentaire', 'Bouteille eau',      'Caisse',             5,   10,  '', 'https://i.postimg.cc/Hs0Svmyb/image-2026-05-01-072720496.png'],
   ['Alimentaire', 'Bonbon cola',        'Caisse',             4,   8,   '', null],
   ['Alimentaire', 'Bonbon tada',        'Caisse',             4,   8,   '', null],
   ['Alimentaire', 'Bonbon Drag',        'Caisse',             4,   8,   '', null],
@@ -577,7 +577,7 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 // ──────────────────────────────────────────────────────────────────
- 
+
 // ── CART ───────────────────────────────────────────────────────────
 let cart = [];
  
@@ -833,4 +833,3 @@ setTimeout(() => {
 </script>
 </body>
 </html>
- 
