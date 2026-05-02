@@ -84,6 +84,8 @@
   .tab.active { color: var(--v); background: var(--bg3); border-color: var(--border2); border-bottom-color: var(--bg3); }
   .tab-n { font-size: 8px; background: var(--bg4); border: 1px solid var(--border2); border-radius: 6px; padding: 1px 6px; color: var(--text3); }
   .tab.active .tab-n { background: var(--vglow); border-color: rgba(167,139,250,.3); color: var(--v); }
+  .tab-notif { width: 7px; height: 7px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 6px var(--amber); animation: notifPulse 1.2s ease-in-out infinite; flex-shrink: 0; }
+  @keyframes notifPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
  
   .scroll-slider-wrap { padding: 7px 24px 8px; background: var(--bg); border-bottom: 1px solid var(--border); }
   .scroll-slider { -webkit-appearance: none; appearance: none; width: 100%; height: 3px; background: var(--border2); border-radius: 3px; outline: none; cursor: pointer; display: block; }
@@ -201,10 +203,7 @@
   .cart-total-label { font-family: var(--font-m); font-size: 8px; letter-spacing: 2.5px; color: var(--text3); text-transform: uppercase; margin-bottom: 4px; }
   .cart-total-val { font-family: var(--font-d); font-size: 34px; letter-spacing: 1px; color: var(--v); line-height: 1; }
   .cart-count-info { font-family: var(--font-m); font-size: 9px; color: var(--text3); margin-top: 3px; }
- 
-  .tab-notif { width: 7px; height: 7px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 6px var(--amber); animation: notifPulse 1.2s ease-in-out infinite; flex-shrink: 0; }
-  @keyframes notifPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.3;transform:scale(.7)} }
- 
+
   /* ── THEME SWITCHER ── */
   .theme-btn { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: var(--radius-sm); background: var(--bg4); border: 1px solid var(--border2); cursor: pointer; font-size: 16px; transition: background .15s, border-color .15s; flex-shrink: 0; }
   .theme-btn:hover { background: var(--vglow); border-color: rgba(167,139,250,.4); }
@@ -214,7 +213,7 @@
   .theme-swatch:hover { transform: scale(1.2); }
   .theme-swatch.active { border-color: var(--text); }
   .theme-wrap { position: relative; }
- 
+
   /* ── LIGHTBOX ── */
   .lightbox { position: fixed; inset: 0; z-index: 99990; background: rgba(0,0,0,.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity .25s; }
   .lightbox.show { opacity: 1; pointer-events: all; }
@@ -222,7 +221,7 @@
   .lightbox.show img { transform: scale(1); }
   .lightbox-close { position: absolute; top: 20px; right: 24px; font-size: 28px; color: var(--text2); cursor: pointer; background: var(--bg4); border: 1px solid var(--border2); border-radius: 50%; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; transition: color .15s, background .15s; }
   .lightbox-close:hover { color: var(--v); background: var(--vglow); }
- 
+
   #splash { position: fixed; inset: 0; z-index: 99999; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity .6s ease, transform .6s ease; }
   #splash.hide { opacity: 0; transform: scale(1.04); pointer-events: none; }
   .splash-logo { opacity: 0; transform: translateY(20px); animation: splashIn .7s cubic-bezier(.34,1.56,.64,1) .2s forwards; }
@@ -232,7 +231,7 @@
   .splash-bar-wrap { margin-top: 48px; width: 180px; height: 2px; background: var(--border2); border-radius: 2px; overflow: hidden; opacity: 0; animation: splashFade .4s ease .8s forwards; }
   .splash-bar { height: 100%; width: 0%; border-radius: 2px; background: linear-gradient(90deg, var(--vd), var(--v)); box-shadow: 0 0 10px var(--v); animation: splashLoad 1.2s cubic-bezier(.4,0,.2,1) .9s forwards; }
   .splash-glow { position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(124,92,191,.25) 0%, transparent 70%); pointer-events: none; animation: splashPulse 2s ease-in-out infinite; }
- 
+
   @keyframes splashIn   { to { opacity:1; transform:translateY(0); } }
   @keyframes splashFade { to { opacity:1; } }
   @keyframes splashLoad { to { width:100%; } }
@@ -333,7 +332,7 @@
   </svg>
   <div class="cart-badge" id="cartBadge">0</div>
 </button>
- 
+
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <div class="lightbox-close" onclick="closeLightbox()">✕</div>
@@ -341,13 +340,7 @@
 </div>
  
 <script>
-// ════════════════════════════════════════════════════════════════════
-//  FORMAT : [Catégorie, Nom, Source, Achat, Vente, Statut, IMAGE]
-//  → Pour ajouter une photo : remplace null par 'https://i.imgur.com/TONID.jpg'
-//  → Statuts dispo : '' | 'Epuise' | 'En stock' | 'Nouvel achat'
-// ════════════════════════════════════════════════════════════════════
 const RAW = [
- 
   // ── JARDINAGE ──────────────────────────────────────────────────
   ['Jardinage', 'Fertilisant',        'Youtools', 5,    10,   '', 'https://i.postimg.cc/SQnxv0pV/91BPwn-XWpu-L-AC-UF1000-1000-QL80.jpg'],
   ['Jardinage', 'Pot de Fleur',       'Youtools', 5,    10,   '', 'https://i.postimg.cc/pTXt8jPs/339427-010.jpg'],
@@ -356,18 +349,18 @@ const RAW = [
   ['Jardinage', 'Bac de jardinage',   'Youtools', 10,   18,   '', 'https://i.postimg.cc/nzybWPv6/shopping.webp'],
   ['Jardinage', 'Lumiere violette',   'Craft',    0,    36,   '', 'https://i.postimg.cc/7ZHvj72y/lumiere-eclairage-noire-fluo.png'],
   ['Jardinage', 'Cisaille',           'Craft',    750,  1050, '', 'https://i.postimg.cc/t4w8Fngb/image-2026-04-30-222857736.png'],
- 
+
   // ── NOUVEAUTÉ ──────────────────────────────────────────────────
   ['Nouveauté', 'Rose',                 'Craft', 0,   250,  '', 'https://i.postimg.cc/P570F7bz/rose.jpg'],
   ['Nouveauté', 'Bouquet de Roses',     'Craft', 0,   1000, '', 'https://i.postimg.cc/nz45rcy1/rose-bou.jpg'],
   ['Nouveauté', 'Bouquet de Fleurs',    'Craft', 0,   600,  '', 'https://i.postimg.cc/rsgPGZF4/telecharge.jpg'],
   ['Nouveauté', 'Rose eternelle',       'Craft', 0,   1600, '', 'https://i.postimg.cc/xTT7jQtB/63127-H-00-3P-HAUPTBILD-WS-3P-FR.jpg'],
-  ['Nouveauté', 'BMX 2 Places', 'Craft', 0, 500, 'Epuise', 'https://i.postimg.cc/fR1gv9DT/royal-factory.png'],
+  ['Nouveauté', 'BMX 2 Places',         'Craft', 0,   500,  'Epuise', 'https://i.postimg.cc/fR1gv9DT/royal-factory.png'],
   ['Nouveauté', 'Trotinette Electrique','Craft', 350, 700,  '', 'https://i.postimg.cc/qRTbPHND/VMAX-Trottinette-electrique-VX5-ST.jpg'],
   ['Nouveauté', 'Doudou Pinguin',       'Craft', 0,   600,  '', 'https://i.postimg.cc/Vvs7N9BX/telecharge-(1).jpg'],
   ['Nouveauté', 'Anneau',               'Craft', 0,   4500, '', 'https://i.postimg.cc/TYw7M9PT/telecharge-(2).jpg'],
   ['Nouveauté', 'Anneau de Mariage',    'Craft', 0,   4000, '', 'https://i.postimg.cc/Vs4GVTm4/telecharge-(3).jpg'],
- 
+
   // ── QUINCAILLERIE ──────────────────────────────────────────────
   ['Quincaillerie', 'Pile Verte',        'Youtools', 1,   3,   '', 'https://i.postimg.cc/Lswd5T4R/image-2026-04-30-174330077.png'],
   ['Quincaillerie', 'Outils',            'Youtools', 3,   5,   '', 'https://i.postimg.cc/vDR4b9jC/image-2026-04-30-172314805.png'],
@@ -377,7 +370,7 @@ const RAW = [
   ['Quincaillerie', 'Pince pour plaque', 'Youtools', 12,  23,  '', 'https://i.postimg.cc/qvxC3yw7/image-2026-04-30-222141464.png'],
   ['Quincaillerie', 'Perceuse manuel',   'Youtools', 7,   12,  '', 'https://i.postimg.cc/BQxjrHdT/image-2026-04-30-222250377.png'],
   ['Quincaillerie', 'Foret de Perceuse', 'Youtools', 400, 650, '', 'https://i.postimg.cc/6Q8rdwD7/foret.jpg'],
- 
+
   // ── ENTRETIEN ──────────────────────────────────────────────────
   ['Entretien', 'Bicarbonate',         'Caisse',             1,   2,  '', 'https://i.postimg.cc/QMG9fxJS/bicarbonate-de-soude-pajo-x-1-kg.png'],
   ['Entretien', 'Caoutchouc',          'Craft',              null,5,  '', 'https://i.postimg.cc/SRBkmjsB/caoutch.jpg'],
@@ -387,7 +380,7 @@ const RAW = [
   ['Entretien', 'Batterie de voiture', 'Youtools',           10,  20, '', 'https://i.postimg.cc/ZnsFnBym/4a9ab44b-e423-4527-b016-d241c9ee246f.png'],
   ['Entretien', 'Kit de Nettoyage',    'Commande entreprise',null,80, '', 'https://i.postimg.cc/9Mpsxpsg/81TWN3Gp-Ur-L-AC-SY300-SX300-QL70-ML2.jpg'],
   ['Entretien', 'Batterie',            'Youtools',           5,   10, '', 'https://i.postimg.cc/VN5w02TN/caef57df-3628-4717-8492-403be62c627b.png'],
- 
+
   // ── PAPETERIE ──────────────────────────────────────────────────
   ['Papeterie', 'Colle',             'Youtools',           1,  3,  '', 'https://i.postimg.cc/282fYL6y/image-2026-05-01-173941868.png'],
   ['Papeterie', 'Sachet vide',       'Commande entreprise',3,  5,  '', 'https://i.postimg.cc/HLznDhbr/image-2026-05-01-170816343.png'],
@@ -395,7 +388,7 @@ const RAW = [
   ['Papeterie', 'Porte Document',    'Caisse',             5,  10, '', 'https://i.postimg.cc/PJgrQsnR/image-2026-05-01-170839737.png'],
   ['Papeterie', 'Porte Feuille',     'Caisse',             5,  10, '', 'https://i.postimg.cc/MpSfC4nR/image-2026-05-01-173612238.png'],
   ['Papeterie', 'Trousseau de cles', 'Caisse',             50, 90, '', 'https://i.postimg.cc/jjygsBXM/image-2026-05-01-174207296.png'],
- 
+
   // ── QUOTIDIEN ──────────────────────────────────────────────────
   ['Quotidien', 'Papier a rouler',       'Caisse',             1,    2,    '', 'https://i.postimg.cc/XJWJT0ZN/image-2026-05-01-165904327.png'],
   ['Quotidien', 'Carte SIM',             'Digital',            5,    10,   '', 'https://i.postimg.cc/RVxBdTHx/image-2026-05-01-170231784.png'],
@@ -412,13 +405,13 @@ const RAW = [
   ['Quotidien', 'Palette de maquillage', 'Commande entreprise',null, 165,  '', 'https://i.postimg.cc/nh6Y9MWS/image-2026-05-01-170533247.png'],
   ['Quotidien', 'BMX',                   'Commande entreprise',null, 200,  '', 'https://i.postimg.cc/fy2YzbX3/image-2026-05-01-170545538.png'],
   ['Quotidien', 'Telephone',             'Digital',            135,  250,  '', 'https://i.postimg.cc/FzRJBQqk/image-2026-05-01-170637830.png'],
-   ['Quotidien', 'Doudou', 'Commande entreprise', null, null, 'Epuise', 'https://i.postimg.cc/ZKgywnS0/image-2026-05-01-173300004.png']
+  ['Quotidien', 'Doudou',                'Commande entreprise',null, null, 'Epuise', 'https://i.postimg.cc/ZKgywnS0/image-2026-05-01-173300004.png'],
   ['Quotidien', 'Appareil Photo',        'Digital',            350,  680,  '', 'https://i.postimg.cc/1tRg8QyM/image-2026-05-01-170712197.png'],
   ['Quotidien', 'Galaxy',                'Digital',            435,  800,  '', 'https://i.postimg.cc/x8ccP3J1/image-2026-05-01-170730475.png'],
   ['Quotidien', 'Tablette',              'Digital',            629,  1000, '', 'https://i.postimg.cc/0jFrXKDY/image-2026-05-01-170737827.png'],
   ['Quotidien', 'Eponge',                'Caisse',             750,  1100, '', 'https://i.postimg.cc/66m7pggh/image-2026-05-01-170750796.png'],
   ['Quotidien', 'Spray Tag',             'Caisse',             1250, 1900, '', 'https://i.postimg.cc/nLprWJjN/image-2026-05-01-170807147.png'],
- 
+
   // ── ALIMENTAIRE ────────────────────────────────────────────────
   ['Alimentaire', 'Creme glacee',       'Caisse',             1,   2,   '', 'https://i.postimg.cc/JhV9DxZj/image-2026-05-01-072013256.png'],
   ['Alimentaire', 'Pot Creme glacee',   'Caisse',             1,   2,   '', 'https://i.postimg.cc/CLRtcX4B/image-2026-05-01-072049084.png'],
@@ -442,7 +435,7 @@ const RAW = [
   ['Alimentaire', 'Menu decouverte',    'Commande entreprise',null,90,  '', 'https://i.postimg.cc/Hkj72HMh/image-2026-05-01-165749911.png'],
   ['Alimentaire', 'Menu festin',        'Commande entreprise',null,120, '', 'https://i.postimg.cc/MTJMqQFN/image-2026-05-01-165812720.png'],
   ['Alimentaire', 'Herisson',           'Caisse',             1,   2,   '', 'https://i.postimg.cc/VNSwDszn/image-2026-05-01-173911638.png'],
- 
+
   // ── POWER ──────────────────────────────────────────────────────
   ['Power', 'Pancakes Proteines',  'Zone sportive plage', 7,  14, '', 'https://i.postimg.cc/85nxZ1Cb/pancakes-prote-ine-s-a-la-whey-sans-sucre.jpg'],
   ['Power', 'Whey fraise',         'Zone sportive plage', 4,  8,  '', 'https://i.postimg.cc/L8g1Qv8J/c55c00ee-c4bf-4de7-bc9b-8fe4fae0c7a9.png'],
@@ -455,21 +448,18 @@ const RAW = [
   ['Power', 'Boisson energetique', 'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/4NNvPzcV/d74c56de-73f5-4dc6-95cb-034b61df7362.png'],
   ['Power', 'Milkshake proteine',  'Zone sportive plage', 2,  4,  '', 'https://i.postimg.cc/5NddF2Fb/35788710-ad50-4945-b6d6-71b446e9811d.png'],
 ];
- 
-// ── PACKS ──────────────────────────────────────────────────────────
+
 const PACK_DATA = [
   { ref:'GS-PCK-001', name:'Pack Pêche',      img:'https://i.postimg.cc/WzywxrKY/image-2026-04-30-223231522.png', price:470,  tagline:'55 appâts + 1 canne à pêche. Tout pour une session réussie.' },
   { ref:'GS-PCK-002', name:'Pack Réparation', img:'https://i.postimg.cc/XqBCGP1V/image-2026-04-30-223514208.png', price:660,  tagline:'1 foret de perceuse + 1 grosse perceuse. Le duo parfait pour vos travaux.' },
   { ref:'GS-PCK-003', name:'Pack Jardinage',  img:'https://i.postimg.cc/9M6GpV7C/image-2026-04-30-223818977.png', price:450,  tagline:'9 pots + 9 fertilisants + 27 bouteilles + 1 lampe violette. La totale pour votre jardin.' },
   { ref:'GS-PCK-004', name:'Pack Artiste',    img:'https://i.postimg.cc/g05Rzd4S/image-2026-04-30-223940042.png', price:2800, tagline:'1 éponge + 1 spray tag. Le pack du vrai artiste de rue.' },
 ];
- 
-// ─── CHANGER L'IMAGE PROMO ICI ─────────────────────────────────────
-const PROMO_IMG = 'https://i.imgur.com/XXXXXXX.jpg'; // <-- colle ton lien Imgur ici
-// ───────────────────────────────────────────────────────────────────
- 
+
+const PROMO_IMG = 'https://i.imgur.com/XXXXXXX.jpg';
+
 const DATA = RAW.map(r => ({ cat:r[0], name:r[1], src:r[2], buy:r[3], sell:r[4], status:r[5], img:r[6]||null }));
- 
+
 const CAT_ICONS = {
   'Promo de la semaine': '⭐',
   'Pack': '📦',
@@ -483,12 +473,12 @@ const CAT_ICONS = {
   'Power': '💪'
 };
 const CATS = ['Tous', ...Object.keys(CAT_ICONS)];
- 
+
 function fmt(v) {
   if (v === null || v === undefined) return 'xx,xx $';
   return v.toLocaleString('fr-FR',{minimumFractionDigits:2,maximumFractionDigits:2})+' $';
 }
- 
+
 const ITEM_TAGLINE = {
   'Fertilisant':'Booste la croissance de vos plantes en un rien de temps.',
   'Pot de Fleur':'Pour cultiver en beauté, dans le style Grove Street.',
@@ -506,7 +496,6 @@ const ITEM_TAGLINE = {
   'Doudou Pinguin':'Un peu de douceur dans ce monde de brutes.',
   'Anneau':'Le symbole ultime, forgé pour durer.',
   'Anneau de Mariage':'Pour sceller les liens les plus précieux.',
-  'Bobine de Cuivre':'Du cuivre pur pour vos montages électriques.',
   'Pile Verte':'Petite pile, grande autonomie.',
   'Outils':'Le kit de base pour ne jamais être à court.',
   'Perceuse':'Compacte et efficace pour tous vos perçages.',
@@ -515,9 +504,7 @@ const ITEM_TAGLINE = {
   'Pince pour plaque':'Indispensable pour la pose de plaques.',
   'Perceuse manuel':'Simple, fiable, sans batterie à charger.',
   'Foret de Perceuse':'Perce dans le béton comme dans du beurre.',
-  'Eponge pour voiture':'Douceur maximale pour votre carrosserie.',
   'Bicarbonate':'Le produit miracle pour nettoyer tout et n\'importe quoi.',
-  'Caoutchouc (Craft)':'Du caoutchouc artisanal, souple et résistant.',
   'Caoutchouc':'Polyvalent et durable pour toutes vos réparations.',
   'Huile':'Lubrifie et protège vos mécaniques.',
   'Huile Noire':'Haute viscosité pour les moteurs exigeants.',
@@ -545,7 +532,6 @@ const ITEM_TAGLINE = {
   'Telephone Basique':'Simple, solide, ça appelle et ça tient la charge.',
   'Palette de maquillage':'Toutes les couleurs pour se réinventer chaque jour.',
   'BMX':'Pour rider dans les rues sans se faire remarquer.',
-  'Porte cle':'Un petit détail qui dit beaucoup.',
   'Telephone':'Puissant, rapide, toujours connecté.',
   'Doudou':'Un peu de douceur dans ce monde de brutes.',
   'Appareil Photo':'Capture chaque moment comme un pro.',
@@ -586,76 +572,41 @@ const ITEM_TAGLINE = {
   'Boisson energetique':'Recharge rapide avant l\'effort.',
   'Milkshake proteine':'Onctueux, savoureux et blindé de protéines.',
 };
- 
+
 // ── THEME SWITCHER ─────────────────────────────────────────────────
 const THEMES = {
-  violet: {
-    v:'#A78BFA', vd:'#7C5CBF', vglow:'rgba(167,139,250,0.15)',
-    bg:'#06050e', bg2:'#09081a', bg3:'#0e0c1c', bg4:'#151228', bg5:'#1c1832',
-    border:'#1a1730', border2:'#251f45', text:'#f0ecff', text2:'#9b91c8', text3:'#4e4770'
-  },
-  bleu: {
-    v:'#60a5fa', vd:'#2563eb', vglow:'rgba(96,165,250,0.15)',
-    bg:'#04080f', bg2:'#060d1a', bg3:'#0a1220', bg4:'#0f192c', bg5:'#162038',
-    border:'#112038', border2:'#1a3255', text:'#e8f0ff', text2:'#7da8d8', text3:'#3a5878'
-  },
-  vert: {
-    v:'#34d399', vd:'#059669', vglow:'rgba(52,211,153,0.15)',
-    bg:'#030f0a', bg2:'#051510', bg3:'#071c15', bg4:'#0a2419', bg5:'#0f2e20',
-    border:'#0d2e1e', border2:'#14422c', text:'#e0fff4', text2:'#6bbf9a', text3:'#2d6649'
-  },
-  rouge: {
-    v:'#f87171', vd:'#dc2626', vglow:'rgba(248,113,113,0.15)',
-    bg:'#0f0404', bg2:'#180606', bg3:'#200808', bg4:'#2a0c0c', bg5:'#341010',
-    border:'#2e0e0e', border2:'#451515', text:'#ffe8e8', text2:'#c47a7a', text3:'#6b3535'
-  },
-  or: {
-    v:'#fbbf24', vd:'#d97706', vglow:'rgba(251,191,36,0.15)',
-    bg:'#0f0c02', bg2:'#181203', bg3:'#201804', bg4:'#2a2006', bg5:'#342808',
-    border:'#2e2408', border2:'#453610', text:'#fff8e0', text2:'#c4a050', text3:'#6b5520'
-  },
-  rose: {
-    v:'#f472b6', vd:'#db2777', vglow:'rgba(244,114,182,0.15)',
-    bg:'#0f0408', bg2:'#18060f', bg3:'#200815', bg4:'#2a0c1c', bg5:'#341022',
-    border:'#2e0e1a', border2:'#451528', text:'#ffe8f4', text2:'#c47aa0', text3:'#6b3555'
-  },
+  violet: { v:'#A78BFA', vd:'#7C5CBF', vglow:'rgba(167,139,250,0.15)', bg:'#06050e', bg2:'#09081a', bg3:'#0e0c1c', bg4:'#151228', bg5:'#1c1832', border:'#1a1730', border2:'#251f45', text:'#f0ecff', text2:'#9b91c8', text3:'#4e4770' },
+  bleu:   { v:'#60a5fa', vd:'#2563eb', vglow:'rgba(96,165,250,0.15)',   bg:'#04080f', bg2:'#060d1a', bg3:'#0a1220', bg4:'#0f192c', bg5:'#162038', border:'#112038', border2:'#1a3255', text:'#e8f0ff', text2:'#7da8d8', text3:'#3a5878' },
+  vert:   { v:'#34d399', vd:'#059669', vglow:'rgba(52,211,153,0.15)',   bg:'#030f0a', bg2:'#051510', bg3:'#071c15', bg4:'#0a2419', bg5:'#0f2e20', border:'#0d2e1e', border2:'#14422c', text:'#e0fff4', text2:'#6bbf9a', text3:'#2d6649' },
+  rouge:  { v:'#f87171', vd:'#dc2626', vglow:'rgba(248,113,113,0.15)',  bg:'#0f0404', bg2:'#180606', bg3:'#200808', bg4:'#2a0c0c', bg5:'#341010', border:'#2e0e0e', border2:'#451515', text:'#ffe8e8', text2:'#c47a7a', text3:'#6b3535' },
+  or:     { v:'#fbbf24', vd:'#d97706', vglow:'rgba(251,191,36,0.15)',   bg:'#0f0c02', bg2:'#181203', bg3:'#201804', bg4:'#2a2006', bg5:'#342808', border:'#2e2408', border2:'#453610', text:'#fff8e0', text2:'#c4a050', text3:'#6b5520' },
+  rose:   { v:'#f472b6', vd:'#db2777', vglow:'rgba(244,114,182,0.15)',  bg:'#0f0408', bg2:'#18060f', bg3:'#200815', bg4:'#2a0c1c', bg5:'#341022', border:'#2e0e1a', border2:'#451528', text:'#ffe8f4', text2:'#c47aa0', text3:'#6b3555' },
 };
- 
+
 function setTheme(name) {
   const t = THEMES[name];
   if (!t) return;
   const r = document.documentElement.style;
-  r.setProperty('--v',       t.v);
-  r.setProperty('--vl',      t.v);
-  r.setProperty('--vd',      t.vd);
-  r.setProperty('--vglow',   t.vglow);
-  r.setProperty('--bg',      t.bg);
-  r.setProperty('--bg2',     t.bg2);
-  r.setProperty('--bg3',     t.bg3);
-  r.setProperty('--bg4',     t.bg4);
-  r.setProperty('--bg5',     t.bg5);
-  r.setProperty('--border',  t.border);
-  r.setProperty('--border2', t.border2);
-  r.setProperty('--text',    t.text);
-  r.setProperty('--text2',   t.text2);
-  r.setProperty('--text3',   t.text3);
+  r.setProperty('--v', t.v); r.setProperty('--vl', t.v); r.setProperty('--vd', t.vd);
+  r.setProperty('--vglow', t.vglow); r.setProperty('--bg', t.bg); r.setProperty('--bg2', t.bg2);
+  r.setProperty('--bg3', t.bg3); r.setProperty('--bg4', t.bg4); r.setProperty('--bg5', t.bg5);
+  r.setProperty('--border', t.border); r.setProperty('--border2', t.border2);
+  r.setProperty('--text', t.text); r.setProperty('--text2', t.text2); r.setProperty('--text3', t.text3);
   document.querySelectorAll('.theme-swatch').forEach(s => s.classList.remove('active'));
   const idx = Object.keys(THEMES).indexOf(name);
   document.querySelectorAll('.theme-swatch')[idx]?.classList.add('active');
   document.getElementById('themePanel').classList.remove('show');
 }
- 
+
 function toggleThemePanel() {
   document.getElementById('themePanel').classList.toggle('show');
 }
- 
+
 document.addEventListener('click', e => {
-  if (!e.target.closest('.theme-wrap')) {
-    document.getElementById('themePanel').classList.remove('show');
-  }
+  if (!e.target.closest('.theme-wrap')) document.getElementById('themePanel').classList.remove('show');
 });
 // ──────────────────────────────────────────────────────────────────
- 
+
 // ── LIGHTBOX ───────────────────────────────────────────────────────
 function openLightbox(src, e) {
   e.stopPropagation();
@@ -667,10 +618,10 @@ function closeLightbox() {
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 // ──────────────────────────────────────────────────────────────────
- 
+
 // ── CART ───────────────────────────────────────────────────────────
 let cart = [];
- 
+
 function flyToCart(originEl) {
   const fab = document.getElementById('cartFab');
   const fabRect = fab.getBoundingClientRect();
@@ -702,7 +653,7 @@ function flyToCart(originEl) {
   }
   requestAnimationFrame(step);
 }
- 
+
 function addToCart(name, price, img, originEl) {
   const ex = cart.find(i => i.name === name);
   if (ex) ex.qty++;
@@ -715,7 +666,7 @@ function addToCart(name, price, img, originEl) {
   clearTimeout(t._t);
   t._t = setTimeout(() => t.classList.remove('show'), 1600);
 }
- 
+
 function updateCartUI() {
   const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
   const count = cart.reduce((s, i) => s + i.qty, 0);
@@ -744,7 +695,7 @@ function updateCartUI() {
     </div>
   `).join('');
 }
- 
+
 function changeQty(idx, d) {
   cart[idx].qty += d;
   if (cart[idx].qty <= 0) cart.splice(idx, 1);
@@ -761,9 +712,9 @@ function closeCart() {
   document.getElementById('cartOverlay').classList.remove('show');
 }
 // ──────────────────────────────────────────────────────────────────
- 
+
 let activeCat = 'Tous';
- 
+
 function buildTabs() {
   document.getElementById('tabs').innerHTML = CATS.map(c => {
     let n;
@@ -773,18 +724,18 @@ function buildTabs() {
     return `<div class="tab ${c===activeCat?'active':''}" onclick="setCat('${c}',this)">${c} <span class="tab-n">${n}</span>${c==='Nouveauté'?'<span class="tab-notif"></span>':''}</div>`;
   }).join('');
 }
- 
+
 function setCat(cat,el) {
   activeCat = cat;
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
   render();
 }
- 
+
 function render() {
   const q = document.getElementById('search').value.trim().toLowerCase();
   const main = document.getElementById('main');
- 
+
   if (activeCat === 'Promo de la semaine') {
     const isPlaceholder = PROMO_IMG.includes('XXXXXXX');
     main.innerHTML = `
@@ -802,7 +753,7 @@ function render() {
       </div>`;
     return;
   }
- 
+
   if (activeCat === 'Pack') {
     const packs = q ? PACK_DATA.filter(p=>p.name.toLowerCase().includes(q)) : PACK_DATA;
     main.innerHTML = `
@@ -829,18 +780,18 @@ function render() {
       </div>`;
     return;
   }
- 
+
   let list = DATA.filter(p => {
     const mc = activeCat==='Tous' ? p.cat !== 'Pack' && p.cat !== 'Nouveauté' : p.cat===activeCat;
     const mq = !q || p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q);
     return mc && mq;
   });
- 
+
   if (!list.length) { main.innerHTML='<div class="empty"><p>Aucun article trouvé</p></div>'; return; }
- 
+
   const groups = {};
   list.forEach(p => { if(!groups[p.cat]) groups[p.cat]=[]; groups[p.cat].push(p); });
- 
+
   let html = `<div class="section-bar">
     <div class="section-label">${activeCat==='Tous'?'Catalogue complet':activeCat} — ${list.length} article${list.length>1?'s':''}</div>
     <select class="sort-select" onchange="sortD(this.value)">
@@ -850,11 +801,11 @@ function render() {
       <option value="alpha">A – Z</option>
     </select>
   </div>`;
- 
+
   const catsToRender = activeCat==='Tous'
     ? Object.keys(CAT_ICONS).filter(c=>c!=='Pack'&&c!=='Promo de la semaine'&&c!=='Nouveauté')
     : [activeCat];
- 
+
   for (const cat of catsToRender) {
     const items = groups[cat] || [];
     if (!items.length) continue;
@@ -885,7 +836,7 @@ function render() {
   }
   main.innerHTML = html;
 }
- 
+
 function sortD(val) {
   if (val==='asc') DATA.sort((a,b)=>(a.sell||0)-(b.sell||0));
   else if (val==='desc') DATA.sort((a,b)=>(b.sell||0)-(a.sell||0));
@@ -893,14 +844,14 @@ function sortD(val) {
   else DATA.sort((a,b)=>a.cat.localeCompare(b.cat,'fr')||a.name.localeCompare(b.name,'fr'));
   render();
 }
- 
+
 function tick() {
   const n = new Date();
   document.getElementById('clock').textContent = String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');
   const d=['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'], mo=['Jan','Fév','Mar','Avr','Mai','Jun','Jul','Aoû','Sep','Oct','Nov','Déc'];
   document.getElementById('cdate').textContent = d[n.getDay()]+' '+n.getDate()+' '+mo[n.getMonth()];
 }
- 
+
 function initSlider() {
   const tabs = document.getElementById('tabs');
   const slider = document.getElementById('tabsSlider');
@@ -909,12 +860,12 @@ function initSlider() {
   tabs.addEventListener('scroll', () => { const m = getMax(); slider.value = m > 0 ? (tabs.scrollLeft / m) * 100 : 0; });
   window.addEventListener('resize', () => { const m = getMax(); slider.value = m > 0 ? (tabs.scrollLeft / m) * 100 : 0; });
 }
- 
+
 buildTabs();
 render(); tick(); setInterval(tick, 15000);
 setTimeout(initSlider, 50);
 updateCartUI();
- 
+
 setTimeout(() => {
   const s = document.getElementById('splash');
   s.classList.add('hide');
@@ -923,4 +874,3 @@ setTimeout(() => {
 </script>
 </body>
 </html>
- 
